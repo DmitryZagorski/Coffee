@@ -37,5 +37,10 @@ public class Main {
 
         System.out.println("This is the end.");
         System.out.println("You can push the button 'Run main' to retry...");
+
+        System.out.println("Example commit and push");
+        System.out.println("Another trying");
     }
+
+
 }
