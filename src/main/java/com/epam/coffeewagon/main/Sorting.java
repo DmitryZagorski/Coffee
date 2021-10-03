@@ -1,20 +1,17 @@
 package com.epam.coffeewagon.main;
 
 import com.epam.coffeewagon.coffee.Coffee;
-import com.epam.coffeewagon.wagon.WagonService;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Comparator;
 import java.util.List;
 
 public class Sorting {
 
-    private WagonService wagonService;
-
-    public Sorting(WagonService wagonService) {
-        this.wagonService = wagonService;
-    }
+    private static final Logger LOGGER = Logger.getLogger(Sorting.class.getSimpleName());
 
     public void sortCargos(List<Coffee> list) throws IOException {
         printLoggerToSortCargo();
@@ -23,9 +20,8 @@ public class Sorting {
         printItems(list);
     }
 
-    private void printLoggerToSortCargo(){
-        new Main().getLogger().info("" +
-                "Started method 'sortCargos' with argument 'List<Coffee>'");
+    private void printLoggerToSortCargo() {
+        LOGGER.info("Started method 'sortCargos' with argument 'List<Coffee>'");
     }
 
     private void printSortingMessage() {
@@ -44,19 +40,19 @@ public class Sorting {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));) {
             switch (reader.readLine()) {
                 case "1":
-                    wagonService.sortByName(list);
+                    sortByName(list);
                     break;
                 case "2":
-                    wagonService.sortByPrice(list);
+                    sortByPrice(list);
                     break;
                 case "3":
-                    wagonService.sortByWeight(list);
+                    sortByWeight(list);
                     break;
                 case "4":
-                    wagonService.sortByPriceToWeight(list);
+                    sortByPriceToWeight(list);
                     break;
                 case "5":
-                    wagonService.sortByNameThenByPrice(list);
+                    sortByNameThenByPrice(list);
                     break;
                 default:
                     System.err.println("Incorrect number, try again");
@@ -64,9 +60,8 @@ public class Sorting {
         }
     }
 
-    private void printLoggerToSortItems(){
-        new Main().getLogger().info("" +
-                "Started method 'sortItems' " +
+    private void printLoggerToSortItems() {
+        LOGGER.info("Started method 'sortItems' " +
                 "with argument 'List<Coffee>', where we should " +
                 "choose one of five variants of sorting our coffeeList");
     }
@@ -74,5 +69,31 @@ public class Sorting {
     private void printItems(List<Coffee> list) {
         list.forEach(System.out::println);
     }
+
+    public List<Coffee> sortByName(List<Coffee> list) {
+        list.sort(Comparator.comparing(Coffee::getName));
+        return list;
+    }
+
+    public List<Coffee> sortByPrice(List<Coffee> list) {
+        list.sort(Comparator.comparing(Coffee::getPrice));
+        return list;
+    }
+
+    public List<Coffee> sortByWeight(List<Coffee> list) {
+        list.sort(Comparator.comparing(Coffee::getWeight));
+        return list;
+    }
+
+    public List<Coffee> sortByPriceToWeight(List<Coffee> list) {
+        list.sort(Comparator.comparing(Coffee::getPriceToWeight));
+        return list;
+    }
+
+    public List<Coffee> sortByNameThenByPrice(List<Coffee> list) {
+        list.sort(Comparator.comparing(Coffee::getName).thenComparing(Coffee::getPrice));
+        return list;
+    }
+
 
 }

@@ -2,13 +2,16 @@ package com.epam.coffeewagon.store;
 
 import com.epam.coffeewagon.coffee.Coffee;
 import com.epam.coffeewagon.coffee.condition.Condition;
-import com.epam.coffeewagon.main.Main;
+import com.epam.coffeewagon.garage.GarageService;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class StoreFileService implements StoreFileInterface {
+
+    private static final Logger LOGGER = Logger.getLogger(GarageService.class.getSimpleName());
 
     private static final String FIRST_CONDITION_COFFEE_IN_STORE = "D:/java/Coffee/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt";
 
@@ -42,11 +45,11 @@ public class StoreFileService implements StoreFileInterface {
     }
 
     private void printLoggerToWriteConditionOfStore() {
-        new Main().getLogger().info("Started method 'writeFirstConditionOfStore'");
+        LOGGER.info("Started method 'writeFirstConditionOfStore'");
     }
 
     private void printIOExceptionLoggerConditionOfStore() {
-        new Main().getLogger().info("We can get an exception, " +
+        LOGGER.error("We can get an exception, " +
                 "if file won't be found");
     }
 
@@ -63,17 +66,15 @@ public class StoreFileService implements StoreFileInterface {
             printNotFountExceptionLoggerToReadConditionOfStore();
             e.printStackTrace();
         }
-        // DON'T REMOVE !!!!!!!!!!!!!!
-        // firstConditionalList = startCoffeeConditionList;
         return firstConditionalList;
     }
 
     private void printLoggerToReadConditionOfStore() {
-        new Main().getLogger().info("Started method 'readFirstConditionOfStore'.");
+        LOGGER.info("Started method 'readFirstConditionOfStore'.");
     }
 
     private void printNotFountExceptionLoggerToReadConditionOfStore() {
-        new Main().getLogger().info("We can get an exception, " +
+        LOGGER.error("We can get an exception, " +
                 "if the class of our objects won't be found.");
     }
 }

@@ -2,6 +2,9 @@ package com.epam.coffeewagon.wagon;
 
 import com.epam.coffeewagon.coffee.Coffee;
 import com.epam.coffeewagon.coffee.condition.Condition;
+import com.epam.coffeewagon.garage.Garage;
+import com.epam.coffeewagon.garage.GarageService;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
@@ -20,18 +23,7 @@ public interface WagonServiceInterface {
     List<Coffee> getListOfCoffeeInWagon(String wagonName);
 
     void addCoffeeToWagonAutomatically(String wagonName, double maxPriceInWagon);
+
     void addCoffeeToWagonManually(String wagonName, String coffeeName, Condition condition);
-
-
-    //  MAYBE REMOVE !!!
-//    List<Coffee> sortByName(List<Coffee> list);
-
-    //List<Coffee> sortByPrice(List<Coffee> list);
-
-    //List<Coffee> sortByWeight(List<Coffee> list);
-
-    //List<Coffee> sortByPriceToWeight(List<Coffee> list);
-
-    //List<Coffee> sortByNameThenByPrice(List<Coffee> list);
 
 }

@@ -3,14 +3,17 @@ package com.epam.coffeewagon.wagon;
 import com.epam.coffeewagon.coffee.Coffee;
 import com.epam.coffeewagon.coffee.condition.Condition;
 import com.epam.coffeewagon.garage.Garage;
-import com.epam.coffeewagon.main.Main;
+import com.epam.coffeewagon.garage.GarageService;
+import com.epam.coffeewagon.main.Sorting;
 import com.epam.coffeewagon.store.StoreService;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class WagonService implements WagonServiceInterface {
+
+    private static final Logger LOGGER = Logger.getLogger(GarageService.class.getSimpleName());
 
     public Double getCurrentCapacityOfCargoInWagon(String name) {
         printLoggerToGettingCapacity();
@@ -27,7 +30,7 @@ public class WagonService implements WagonServiceInterface {
     }
 
     private void printLoggerToGettingCapacity() {
-        new Main().getLogger().info("Started method 'getCurrentCapacityOfCargoInWagon' " +
+        LOGGER.info("Started method 'getCurrentCapacityOfCargoInWagon' " +
                 "with argument 'name'");
     }
 
@@ -46,11 +49,12 @@ public class WagonService implements WagonServiceInterface {
     }
 
     private void printLoggerToGettingWeight() {
-        new Main().getLogger().info("Started method 'getCurrentWeightOfCargoInWagon' " +
+        LOGGER.info("Started method 'getCurrentWeightOfCargoInWagon' " +
                 "with argument 'name'");
     }
 
     public Double getCurrentPriceOfCargoInWagon(String name) {
+        printLoggerToGettingPrice();
         double currentPrice = 0;
         for (Wagon wagon : Garage.getListOfWagon()) {
             if (wagon.getName().equals(name)) {
@@ -64,7 +68,7 @@ public class WagonService implements WagonServiceInterface {
     }
 
     private void printLoggerToGettingPrice() {
-        new Main().getLogger().info("Started method 'getCurrentPriceOfCargoInWagon' " +
+        LOGGER.info("Started method 'getCurrentPriceOfCargoInWagon' " +
                 "with argument 'name'");
     }
 
@@ -78,7 +82,6 @@ public class WagonService implements WagonServiceInterface {
                     wagon.getCargoList().add(coffee);
                     System.out.println(coffee.getName() + " - " +
                             coffee.getCondition() + " (price = " + coffee.getPrice() + " )" + " was added.");
-
                 } else {
                     System.out.println("Full wagon. Free capacity equals " + getCurrentCapacityOfCargoInWagon(wagon.getName()) +
                             "Free wight equals " + getCurrentWeightOfCargoInWagon(wagon.getName()) +
@@ -91,7 +94,7 @@ public class WagonService implements WagonServiceInterface {
     }
 
     private void printLoggerToAddingCoffeeToWagon() {
-        new Main().getLogger().info("Started method 'addCoffeeToWagon' " +
+        LOGGER.info("Started method 'addCoffeeToWagon' " +
                 "with arguments 'wagonName' and 'coffee'");
     }
 
@@ -120,7 +123,7 @@ public class WagonService implements WagonServiceInterface {
     }
 
     private void printLoggerToAddingCoffeeToWagonManually() {
-        new Main().getLogger().info("Started method 'addCoffeeToWagonManually' " +
+        LOGGER.info("Started method 'addCoffeeToWagonManually' " +
                 "with arguments 'wagonName', 'coffeeName' and 'condition'");
     }
 
@@ -138,7 +141,7 @@ public class WagonService implements WagonServiceInterface {
     }
 
     private void printLoggerToRemoveCoffeeFromWagon() {
-        new Main().getLogger().info("Started method 'removeCoffeeFromWagon' " +
+        LOGGER.info("Started method 'removeCoffeeFromWagon' " +
                 "with arguments 'wagonName' and 'coffee'");
     }
 
@@ -160,8 +163,8 @@ public class WagonService implements WagonServiceInterface {
         return coffeeList;
     }
 
-    private void printLoggerToGettingListOfCoffeeInWagon(){
-        new Main().getLogger().info("Started method 'removeCoffeeFromWagon' " +
+    private void printLoggerToGettingListOfCoffeeInWagon() {
+        LOGGER.info("Started method 'removeCoffeeFromWagon' " +
                 "with arguments 'wagonName' and 'coffee'");
     }
 
@@ -184,11 +187,11 @@ public class WagonService implements WagonServiceInterface {
     }
 
     private void printLoggerToAddingCoffeeToWagonAutomatically() {
-        new Main().getLogger().info("Started method 'addCoffeeToWagonAutomatically' " +
+        LOGGER.info("Started method 'addCoffeeToWagonAutomatically' " +
                 "with arguments 'wagonName' and 'maxPriceInWagon'");
     }
 
-    private void addCoffeeAfterCheckingPrice(String wagonName, Coffee coffee, double maxPriceInWagon){
+    private void addCoffeeAfterCheckingPrice(String wagonName, Coffee coffee, double maxPriceInWagon) {
         printLoggerToAddingCoffeeAfterCheckingPrice();
         int price = (int) maxPriceInWagon / 3;
         for (int i = 0; i < price / coffee.getPrice(); i++) {
@@ -199,45 +202,21 @@ public class WagonService implements WagonServiceInterface {
     }
 
     private void printLoggerToAddingCoffeeAfterCheckingPrice() {
-        new Main().getLogger().info("Started method 'addCoffeeAfterCheckingPrice' " +
+        LOGGER.info("Started method 'addCoffeeAfterCheckingPrice' " +
                 "with arguments 'wagonName', 'coffee' and 'maxPriceInWagon'");
     }
 
     public Coffee findCheepCoffeeInStore() {
+        printLoggerToFindingCheepCoffeeInStore();
         Coffee cheepCoffee;
-        List<Coffee> sortedList = sortByName(new StoreService().getListOfCoffeeInStore());
+        List<Coffee> sortedList = new Sorting().sortByName(new StoreService().getListOfCoffeeInStore());
         cheepCoffee = sortedList.get(0);
         return cheepCoffee;
     }
 
     private void printLoggerToFindingCheepCoffeeInStore() {
-        new Main().getLogger().info("Started method 'findCheepCoffeeInStore' " +
+        LOGGER.info("Started method 'findCheepCoffeeInStore' " +
                 "without arguments");
-    }
-
-    public List<Coffee> sortByName(List<Coffee> list) {
-        list.sort(Comparator.comparing(Coffee::getName));
-        return list;
-    }
-
-    public List<Coffee> sortByPrice(List<Coffee> list) {
-        list.sort(Comparator.comparing(Coffee::getPrice));
-        return list;
-    }
-
-    public List<Coffee> sortByWeight(List<Coffee> list) {
-        list.sort(Comparator.comparing(Coffee::getWeight));
-        return list;
-    }
-
-    public List<Coffee> sortByPriceToWeight(List<Coffee> list) {
-        list.sort(Comparator.comparing(Coffee::getPriceToWeight));
-        return list;
-    }
-
-    public List<Coffee> sortByNameThenByPrice(List<Coffee> list) {
-        list.sort(Comparator.comparing(Coffee::getName).thenComparing(Coffee::getPrice));
-        return list;
     }
 
 }

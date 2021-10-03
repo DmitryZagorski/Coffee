@@ -2,7 +2,9 @@ package com.epam.coffeewagon.main;
 
 import com.epam.coffeewagon.coffee.Coffee;
 import com.epam.coffeewagon.coffee.condition.Condition;
+import com.epam.coffeewagon.garage.GarageService;
 import com.epam.coffeewagon.wagon.WagonServiceInterface;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,6 +12,9 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 public class Loading {
+
+    private static final Logger LOGGER = Logger.getLogger(GarageService.class.getSimpleName());
+
     private WagonServiceInterface wagonServiceInterface;
 
     public Loading(WagonServiceInterface wagonServiceInterface) {
@@ -55,9 +60,8 @@ public class Loading {
         }
     }
 
-    private void printLoggerToLoadWagon(){
-        new Main().getLogger().info("" +
-                "Started method 'loadWagon' " +
+    private void printLoggerToLoadWagon() {
+        LOGGER.info("Started method 'loadWagon' " +
                 "with arguments 'name' and 'maxPrice', " +
                 "which should load created earlier wagon with coffee.");
     }
@@ -88,9 +92,8 @@ public class Loading {
         }
     }
 
-    private void printLoggerToChooseNameOfLoadingCoffee(){
-        new Main().getLogger().info("" +
-                "Started method 'chooseNameOfLoadingCoffee' " +
+    private void printLoggerToChooseNameOfLoadingCoffee() {
+        LOGGER.info("Started method 'chooseNameOfLoadingCoffee' " +
                 "without arguments, where we should " +
                 "choose one of three names of coffee");
     }
@@ -122,9 +125,8 @@ public class Loading {
         }
     }
 
-    private void printLoggerToChooseConditionOfLoadingCoffee(){
-        new Main().getLogger().info("" +
-                "Started method 'chooseConditionOfLoadingCoffee' " +
+    private void printLoggerToChooseConditionOfLoadingCoffee() {
+        LOGGER.info("Started method 'chooseConditionOfLoadingCoffee' " +
                 "without arguments, where we should " +
                 "choose one of four conditions of coffee");
     }

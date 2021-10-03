@@ -1,22 +1,13 @@
 package com.epam.coffeewagon.main;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class LoadingTest {
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
     void viewListOfCoffeeInStore() {
-
     }
 
     @Test
@@ -28,18 +19,18 @@ class LoadingTest {
     }
 
     @Test
-    void addManuallyAfterQuestionWhatName() {
+    void chooseNameOfLoadingCoffee() {
     }
 
     @Test
-    void printQuestionAboutNameForManual() {
+    void askNameOfLoadingCoffee() {
     }
 
     @Test
-    void addManuallyAfterQuestionWhatCondition() {
+    void chooseConditionOfLoadingCoffee() {
     }
 
     @Test
-    void printQuestionsAboutConditionForManual() {
+    void askConditionOfLoadingCoffee() {
     }
 }

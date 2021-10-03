@@ -6,17 +6,14 @@ import com.epam.coffeewagon.store.StoreInterface;
 import com.epam.coffeewagon.store.StoreService;
 import com.epam.coffeewagon.wagon.WagonService;
 import com.epam.coffeewagon.wagon.WagonServiceInterface;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
-import java.util.logging.Logger;
+
 
 public class Main {
 
     private static final Logger LOGGER = Logger.getLogger(Main.class.getSimpleName());
-
-    public Logger getLogger(){
-        return LOGGER;
-    }
 
     public static void main(String[] args) throws IOException {
 
@@ -26,13 +23,11 @@ public class Main {
 
         WagonServiceInterface wagonServiceInterface = new WagonService();
 
-        WagonService wagonService = new WagonService();
-
         StoreInterface storeInterface = new StoreService();
 
         Greeting greeting = new Greeting();
         Loading loading = new Loading(wagonServiceInterface);
-        Sorting sorting = new Sorting(wagonService);
+        Sorting sorting = new Sorting();
 
         greeting.greet();
         System.out.println("Enter the name of wagon:");
