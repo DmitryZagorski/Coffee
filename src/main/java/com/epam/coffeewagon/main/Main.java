@@ -1,24 +1,21 @@
-package com.main;
+package com.epam.coffeewagon.main;
 
-import com.garage.GarageService;
-import com.garage.GarageServiceInterface;
-import com.store.StoreInterface;
-import com.store.StoreService;
-import com.wagon.WagonService;
-import com.wagon.WagonServiceInterface;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import com.epam.coffeewagon.garage.GarageService;
+import com.epam.coffeewagon.garage.GarageServiceInterface;
+import com.epam.coffeewagon.store.StoreInterface;
+import com.epam.coffeewagon.store.StoreService;
+import com.epam.coffeewagon.wagon.WagonService;
+import com.epam.coffeewagon.wagon.WagonServiceInterface;
 
 import java.io.IOException;
-
-
+import java.util.logging.Logger;
 
 public class Main {
 
     private static final Logger LOGGER = Logger.getLogger(Main.class.getSimpleName());
 
-    public Main(){
-        PropertyConfigurator.configure("log4j.properties");
+    public Logger getLogger(){
+        return LOGGER;
     }
 
     public static void main(String[] args) throws IOException {
@@ -29,23 +26,25 @@ public class Main {
 
         WagonServiceInterface wagonServiceInterface = new WagonService();
 
+        WagonService wagonService = new WagonService();
+
         StoreInterface storeInterface = new StoreService();
 
         Greeting greeting = new Greeting();
-        Loading loading = new Loading();
-        Sorting sorting = new Sorting();
+        Loading loading = new Loading(wagonServiceInterface);
+        Sorting sorting = new Sorting(wagonService);
 
         greeting.greet();
         System.out.println("Enter the name of wagon:");
-        String name = greeting.choiceOfWagonName();
+        String name = greeting.chooseWagonName();
         System.out.println("Enter the max price of cargo in wagon:");
-        Double maxPrice = greeting.choiceOfMaxPriceOfCargoInWagon();
+        Double maxPrice = greeting.chooseMaxPriceOfCargoInWagon();
         garageServiceInterface.addWagon(name, maxPrice);
 
         loading.viewListOfCoffeeInStore(storeInterface.getListOfCoffeeInStore());
-        loading.loadingOfWagon(name, maxPrice);
+        loading.loadWagon(name, maxPrice);
 
-        sorting.sortingOfCargoListInWagon(wagonServiceInterface.getListOfCoffeeInWagon(name));
+        sorting.sortCargos(wagonServiceInterface.getListOfCoffeeInWagon(name));
 
         System.out.println("This is the end.");
         System.out.println("You can push the button 'Run main' to retry...");

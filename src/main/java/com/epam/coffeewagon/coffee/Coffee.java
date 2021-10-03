@@ -1,6 +1,6 @@
-package com.coffee;
+package com.epam.coffeewagon.coffee;
 
-import com.coffee.condition.Condition;
+import com.epam.coffeewagon.coffee.condition.Condition;
 
 import java.io.Serializable;
 

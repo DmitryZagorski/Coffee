@@ -1,6 +1,6 @@
-package com.garage;
+package com.epam.coffeewagon.garage;
 
-import com.wagon.Wagon;
+import com.epam.coffeewagon.wagon.Wagon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,9 +9,6 @@ public class Garage{
 
     private String name;
     private static List<Wagon> listOfWagon = new ArrayList<>();
-
-    public Garage() {
-    }
 
     public Garage(String name) {
         this.name = name;

@@ -1,4 +1,4 @@
-package com.coffee.condition;
+package com.epam.coffeewagon.coffee.condition;
 
 public enum Condition {
 

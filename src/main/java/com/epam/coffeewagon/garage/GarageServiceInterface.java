@@ -1,4 +1,4 @@
-package com.garage;
+package com.epam.coffeewagon.garage;
 
 public interface GarageServiceInterface {
 

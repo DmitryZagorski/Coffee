@@ -1,6 +1,6 @@
-package com.store;
+package com.epam.coffeewagon.store;
 
-import com.coffee.Coffee;
+import com.epam.coffeewagon.coffee.Coffee;
 
 import java.util.List;
 

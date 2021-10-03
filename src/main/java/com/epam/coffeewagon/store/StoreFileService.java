@@ -1,7 +1,8 @@
-package com.store;
+package com.epam.coffeewagon.store;
 
-import com.coffee.Coffee;
-import com.coffee.condition.Condition;
+import com.epam.coffeewagon.coffee.Coffee;
+import com.epam.coffeewagon.coffee.condition.Condition;
+import com.epam.coffeewagon.main.Main;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public class StoreFileService implements StoreFileInterface {
 
-    private static final String FIRST_CONDITION_COFFEE_IN_STORE = "D:/java/Coffee/src/main/java/com/store/FirstCoffeeListInStore.txt";
+    private static final String FIRST_CONDITION_COFFEE_IN_STORE = "D:/java/Coffee/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt";
 
     List<Coffee> startCoffeeConditionList = new ArrayList<>();
 
@@ -30,34 +31,49 @@ public class StoreFileService implements StoreFileInterface {
     }
 
     public void writeFirstConditionOfStore() {
-        try {
-            FileOutputStream fos = new FileOutputStream(FIRST_CONDITION_COFFEE_IN_STORE);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
+        printLoggerToWriteConditionOfStore();
+        try (FileOutputStream fos = new FileOutputStream(FIRST_CONDITION_COFFEE_IN_STORE);
+             ObjectOutputStream oos = new ObjectOutputStream(fos);) {
             oos.writeObject(startCoffeeConditionList);
-            oos.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
+            printIOExceptionLoggerConditionOfStore();
             e.printStackTrace();
         }
     }
 
+    private void printLoggerToWriteConditionOfStore() {
+        new Main().getLogger().info("Started method 'writeFirstConditionOfStore'");
+    }
+
+    private void printIOExceptionLoggerConditionOfStore() {
+        new Main().getLogger().info("We can get an exception, " +
+                "if file won't be found");
+    }
+
     public List<Coffee> readFirstConditionOfStore() {
+        printLoggerToReadConditionOfStore();
         List<Coffee> firstConditionalList = new ArrayList<>();
-       /* try{
-            FileInputStream fis = new FileInputStream(FIRST_CONDITION_COFFEE_IN_STORE);
-            ObjectInputStream ois = new ObjectInputStream(fis);
+        try (FileInputStream fis = new FileInputStream(FIRST_CONDITION_COFFEE_IN_STORE);
+             ObjectInputStream ois = new ObjectInputStream(fis);) {
             firstConditionalList = (List<Coffee>) ois.readObject();
-            ois.close();
-            fis.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
+            printIOExceptionLoggerConditionOfStore();
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
+            printNotFountExceptionLoggerToReadConditionOfStore();
             e.printStackTrace();
-        }*/
-        firstConditionalList = startCoffeeConditionList;
+        }
+        // DON'T REMOVE !!!!!!!!!!!!!!
+        // firstConditionalList = startCoffeeConditionList;
         return firstConditionalList;
+    }
+
+    private void printLoggerToReadConditionOfStore() {
+        new Main().getLogger().info("Started method 'readFirstConditionOfStore'.");
+    }
+
+    private void printNotFountExceptionLoggerToReadConditionOfStore() {
+        new Main().getLogger().info("We can get an exception, " +
+                "if the class of our objects won't be found.");
     }
 }
