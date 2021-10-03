@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 public class Coffee implements Serializable {
 
+    static final long serialVersionUID = -5843571478875457590L;
+
     private final String name;
     private Condition condition;
     private double capacity;
