@@ -1,7 +1,8 @@
 package com.epam.coffeewagon.main;
 
 import com.epam.coffeewagon.coffee.Coffee;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,9 +12,9 @@ import java.util.List;
 
 public class Sorting {
 
-    private static final Logger LOGGER = Logger.getLogger(Sorting.class.getSimpleName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Sorting.class.getSimpleName());
 
-    public void sortCargos(List<Coffee> list) throws IOException {
+    public void sortCargos(List<Coffee> list) {
         printLoggerToSortCargo();
         printSortingMessage();
         sortItems(list);
@@ -21,7 +22,7 @@ public class Sorting {
     }
 
     private void printLoggerToSortCargo() {
-        LOGGER.info("Started method 'sortCargos' with argument 'List<Coffee>'");
+        LOGGER.info("Starting sorting of coffee in wagon");
     }
 
     private void printSortingMessage() {
@@ -35,9 +36,9 @@ public class Sorting {
         );
     }
 
-    private void sortItems(List<Coffee> list) throws IOException {
-        printLoggerToSortItems();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));) {
+    private void sortItems(List<Coffee> list) {
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             switch (reader.readLine()) {
                 case "1":
                     sortByName(list);
@@ -57,13 +58,9 @@ public class Sorting {
                 default:
                     System.err.println("Incorrect number, try again");
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }
-
-    private void printLoggerToSortItems() {
-        LOGGER.info("Started method 'sortItems' " +
-                "with argument 'List<Coffee>', where we should " +
-                "choose one of five variants of sorting our coffeeList");
     }
 
     private void printItems(List<Coffee> list) {

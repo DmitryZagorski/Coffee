@@ -1,14 +1,14 @@
 package com.epam.coffeewagon.store;
 
 import com.epam.coffeewagon.coffee.Coffee;
-import com.epam.coffeewagon.garage.GarageService;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 public class StoreService implements StoreInterface {
 
-    private static final Logger LOGGER = Logger.getLogger(GarageService.class.getSimpleName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(StoreService.class.getSimpleName());
 
     List<Coffee> listOfCoffeeInStore;
 
@@ -20,29 +20,25 @@ public class StoreService implements StoreInterface {
         return listOfCoffeeInStore;
     }
 
-
-    public List<Coffee> addCoffeeToStore(Coffee coffee) {
+    public void addCoffeeToStore(Coffee coffee) {
         if (coffee.getCapacity() > 0 && coffee.getPrice() > 0 && coffee.getWeight() > 0) {
             listOfCoffeeInStore.add(coffee);
         }
-        return listOfCoffeeInStore;
     }
 
-    public List<Coffee> removeCoffeeFromStore(Coffee coffee) {
+    public void removeCoffeeFromStore(Coffee coffee) {
         printLoggerToRemoveCoffeeFromStore();
-        if (listOfCoffeeInStore.contains(coffee)) {
-            for (Coffee storeCoffee : listOfCoffeeInStore) {
-                if (coffee.getName().equals(storeCoffee.getName()) &&
-                        coffee.getCapacity() == storeCoffee.getCapacity()) {
-                    listOfCoffeeInStore.remove(coffee);
-                } else if (coffee.getName().equals(storeCoffee.getName()) &&
-                        coffee.getCapacity() < storeCoffee.getCapacity()) {
-                    storeCoffee.setCapacity(storeCoffee.getCapacity() -
-                            coffee.getCapacity());
-                } else System.out.println("Wrong data");
+        for (int i = 0; i < getListOfCoffeeInStore().size(); i++) {
+            if (coffee.getName().equals(getListOfCoffeeInStore().get(i).getName()) &&
+                    coffee.getPrice() == getListOfCoffeeInStore().get(i).getPrice() &&
+                    coffee.getCapacity() == getListOfCoffeeInStore().get(i).getCapacity()) {
+                getListOfCoffeeInStore().remove(getListOfCoffeeInStore().get(i));
+            } else if (coffee.getName().equals(getListOfCoffeeInStore().get(i).getName()) &&
+                    coffee.getCapacity() < getListOfCoffeeInStore().get(i).getCapacity()) {
+                getListOfCoffeeInStore().get(i).setCapacity(getListOfCoffeeInStore().get(i).getCapacity() -
+                        coffee.getCapacity());
             }
         }
-        return listOfCoffeeInStore;
     }
 
     private void printLoggerToRemoveCoffeeFromStore() {

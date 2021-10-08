@@ -2,8 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbaf097-8380-4c8d-9d85-13ccab8f8011" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/garage/GarageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/garage/GarageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Loading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Loading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Sorting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreFileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/garage/GarageServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/garage/GarageServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/LoadingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/LoadingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/SortingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/SortingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreFileServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreFileServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/wagon/WagonServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/wagon/WagonServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/coffee/Coffee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/coffee/condition/Condition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/garage/Garage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/garage/GarageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/garage/GarageServiceInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/main/Greeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/main/Loading.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/main/Sorting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/store/Store.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/store/StoreFileInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/store/StoreFileService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/store/StoreInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/store/StoreService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wagon/Wagon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wagon/WagonService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wagon/WagonServiceInterface.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +54,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -40,33 +76,44 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.epam.coffeewagon.wagon" />
+      <recent name="com.epam.coffeewagon.store" />
+      <recent name="com.epam.coffeewagon.main" />
+      <recent name="com.epam.coffeewagon.garage" />
+      <recent name="com.garage" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.epam.coffeewagon" />
+      <recent name="com.epam.coffeewagon.main" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\java\Coffee\src\main\java\com\store" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.person.Main" />
-      <module name="Coffee" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.person.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.main.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.coffeewagon.main.Main" />
       <module name="Coffee" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.main.*" />
+          <option name="PATTERN" value="com.epam.coffeewagon.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -74,15 +121,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Person" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.person.Person" />
+    <configuration name="SortingTest.sortByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Coffee" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.person.*" />
+          <option name="PATTERN" value="com.epam.coffeewagon.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.epam.coffeewagon.main" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.coffeewagon.main.SortingTest" />
+      <option name="METHOD_NAME" value="sortByName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortingTest.sortByPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coffee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.coffeewagon.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.coffeewagon.main" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.coffeewagon.main.SortingTest" />
+      <option name="METHOD_NAME" value="sortByPrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortingTest.sortByPriceToWeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coffee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.coffeewagon.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.coffeewagon.main" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.coffeewagon.main.SortingTest" />
+      <option name="METHOD_NAME" value="sortByPriceToWeight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortingTest.sortByWeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coffee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.coffeewagon.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.coffeewagon.main" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.coffeewagon.main.SortingTest" />
+      <option name="METHOD_NAME" value="sortByWeight" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,8 +188,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Person" />
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.SortingTest.sortByPriceToWeight" />
+        <item itemvalue="JUnit.SortingTest.sortByWeight" />
+        <item itemvalue="JUnit.SortingTest.sortByPrice" />
+        <item itemvalue="JUnit.SortingTest.sortByName" />
       </list>
     </recent_temporary>
   </component>
@@ -109,69 +209,105 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="109" y="13" key="#SortingTest.sortCargos" timestamp="1633244980177">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="109" y="13" key="#SortingTest.sortCargos/0.0.1024.728@0.0.1024.728" timestamp="1633244980177" />
     <state x="240" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1632671816015">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="240" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1024.728@0.0.1024.728" timestamp="1632671816015" />
-    <state x="317" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1633039967818">
+    <state x="317" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1633251775174">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="317" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1024.728@0.0.1024.728" timestamp="1633039967818" />
+    <state x="317" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1024.728@0.0.1024.728" timestamp="1633251775174" />
+    <state x="255" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1633254913512">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="255" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1024.728@0.0.1024.728" timestamp="1633254913512" />
+    <state x="308" y="222" width="410" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1633243476022">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="308" y="222" width="410" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1024.728@0.0.1024.728" timestamp="1633243476022" />
+    <state x="308" y="243" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1633254918613">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="308" y="243" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1024.728@0.0.1024.728" timestamp="1633254918613" />
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1632874261584">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1024.728@0.0.1024.728" timestamp="1632874261584" />
-    <state x="242" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1633158869180">
+    <state x="242" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1633255898809">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="242" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1024.728@0.0.1024.728" timestamp="1633158869180" />
+    <state x="242" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1024.728@0.0.1024.728" timestamp="1633255898809" />
     <state x="267" y="66" key="#xdebugger.evaluate" timestamp="1633155779540">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="267" y="66" key="#xdebugger.evaluate/0.0.1024.728@0.0.1024.728" timestamp="1633155779540" />
-    <state width="980" height="216" key="GridCell.Tab.0.bottom" timestamp="1633160823297">
+    <state width="980" height="174" key="GridCell.Tab.0.bottom" timestamp="1633639531969">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633160823297" />
-    <state width="980" height="216" key="GridCell.Tab.0.center" timestamp="1633160823297">
+    <state width="980" height="174" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633639531969" />
+    <state width="980" height="174" key="GridCell.Tab.0.center" timestamp="1633639531969">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1633160823297" />
-    <state width="980" height="216" key="GridCell.Tab.0.left" timestamp="1633160823297">
+    <state width="980" height="174" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1633639531969" />
+    <state width="980" height="174" key="GridCell.Tab.0.left" timestamp="1633639531969">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1633160823297" />
-    <state width="980" height="216" key="GridCell.Tab.0.right" timestamp="1633160823297">
+    <state width="980" height="174" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1633639531969" />
+    <state width="980" height="174" key="GridCell.Tab.0.right" timestamp="1633639531969">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1633160823297" />
-    <state width="980" height="216" key="GridCell.Tab.1.bottom" timestamp="1633160823297">
+    <state width="980" height="174" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1633639531969" />
+    <state width="980" height="216" key="GridCell.Tab.1.bottom" timestamp="1633554648808">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633160823297" />
-    <state width="980" height="216" key="GridCell.Tab.1.center" timestamp="1633160823297">
+    <state width="980" height="216" key="GridCell.Tab.1.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633554648808" />
+    <state width="980" height="216" key="GridCell.Tab.1.center" timestamp="1633554648808">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.center/0.0.1024.728@0.0.1024.728" timestamp="1633160823297" />
-    <state width="980" height="216" key="GridCell.Tab.1.left" timestamp="1633160823297">
+    <state width="980" height="216" key="GridCell.Tab.1.center/0.0.1024.728@0.0.1024.728" timestamp="1633554648808" />
+    <state width="980" height="216" key="GridCell.Tab.1.left" timestamp="1633554648808">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.left/0.0.1024.728@0.0.1024.728" timestamp="1633160823297" />
-    <state width="980" height="216" key="GridCell.Tab.1.right" timestamp="1633160823297">
+    <state width="980" height="216" key="GridCell.Tab.1.left/0.0.1024.728@0.0.1024.728" timestamp="1633554648808" />
+    <state width="980" height="216" key="GridCell.Tab.1.right" timestamp="1633554648808">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.right/0.0.1024.728@0.0.1024.728" timestamp="1633160823297" />
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1633152183325">
+    <state width="980" height="216" key="GridCell.Tab.1.right/0.0.1024.728@0.0.1024.728" timestamp="1633554648808" />
+    <state x="42" y="18" key="Maven.ArtifactSearchDialog" timestamp="1633185836599">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1633152183325" />
-    <state x="168" y="157" key="run.anything.popup" timestamp="1632940193841">
+    <state x="42" y="18" key="Maven.ArtifactSearchDialog/0.0.1024.728@0.0.1024.728" timestamp="1633185836599" />
+    <state x="0" y="0" key="SettingsEditor" timestamp="1633185453948">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="168" y="157" key="run.anything.popup/0.0.1024.728@0.0.1024.728" timestamp="1632940193841" />
-    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1632640701187">
+    <state x="0" y="0" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1633185453948" />
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1633625434200">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1024.728@0.0.1024.728" timestamp="1632640701187" />
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1633625434200" />
+    <state x="216" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1633185431464">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="216" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1024.728@0.0.1024.728" timestamp="1633185431464" />
+    <state x="196" y="82" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1633268749353">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="196" y="82" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1024.728@0.0.1024.728" timestamp="1633268749353" />
+    <state x="0" y="58" key="new project wizard" timestamp="1633625509502">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="0" y="58" key="new project wizard/0.0.1024.728@0.0.1024.728" timestamp="1633625509502" />
+    <state x="168" y="157" key="run.anything.popup" timestamp="1633629616208">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="168" y="157" key="run.anything.popup/0.0.1024.728@0.0.1024.728" timestamp="1633629616208" />
+    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1633634462575">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1024.728@0.0.1024.728" timestamp="1633634462575" />
   </component>
 </project>

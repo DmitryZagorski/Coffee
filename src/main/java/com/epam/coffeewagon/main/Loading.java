@@ -2,9 +2,9 @@ package com.epam.coffeewagon.main;
 
 import com.epam.coffeewagon.coffee.Coffee;
 import com.epam.coffeewagon.coffee.condition.Condition;
-import com.epam.coffeewagon.garage.GarageService;
 import com.epam.coffeewagon.wagon.WagonServiceInterface;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.util.List;
 
 public class Loading {
 
-    private static final Logger LOGGER = Logger.getLogger(GarageService.class.getSimpleName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Loading.class.getSimpleName());
 
     private WagonServiceInterface wagonServiceInterface;
 
@@ -28,41 +28,52 @@ public class Loading {
         }
     }
 
-    public void loadWagon(String wagonName, Double maxPrice) throws IOException {
+    public void loadWagon(String wagonName, Double maxPrice) {
         printLoggerToLoadWagon();
         printInfoBeforeLoadWagon();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));) {
-            switch (reader.readLine()) {
-                case "1":
-                    wagonServiceInterface.addCoffeeToWagonAutomatically(wagonName, maxPrice);
-                    System.out.println("List of coffee in wagon: ");
-                    for (Coffee coffee : wagonServiceInterface.getListOfCoffeeInWagon(wagonName)) {
-                        System.out.println(coffee.toString());
-                    }
-                    break;
-                case "2":
-                    System.out.println("Press '1' to add the coffee.\n" +
-                            "Press '2' to STOP.");
-                    String a = reader.readLine();
-                    if (a.equals("1")) {
-                        wagonServiceInterface.addCoffeeToWagonManually(wagonName, chooseNameOfLoadingCoffee(), chooseConditionOfLoadingCoffee());
-                    }
-                    if (a.equals("2")) {
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            {
+                switch (reader.readLine()) {
+                    case "1":
+                        wagonServiceInterface.addCoffeeToWagonAutomatically(wagonName, maxPrice);
                         System.out.println("List of coffee in wagon: ");
                         for (Coffee coffee : wagonServiceInterface.getListOfCoffeeInWagon(wagonName)) {
                             System.out.println(coffee.toString());
                         }
                         break;
-                    }
-                default:
-                    System.err.println("Incorrect number. Try again.");
+                    case "2":
+                        loadManuallyInCase2(wagonName);
+                        break;
+                    default:
+                        System.err.println("Incorrect number. Try again.");
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadManuallyInCase2(String wagonName) throws IOException {
+        System.out.println("Press '1' to add the coffee.\n" +
+                "Press '2' to STOP.");
+
+        String newString = new Communicator().getStringFromBufferedReader();
+        if (newString.equals("1")) {
+            wagonServiceInterface.addCoffeeToWagonManually(wagonName, chooseNameOfLoadingCoffee(), chooseConditionOfLoadingCoffee());
+            loadManuallyInCase2(wagonName);
+        }
+        if (newString.equals("2")) {
+            System.out.println("List of coffee in wagon: ");
+            for (Coffee coffee : wagonServiceInterface.getListOfCoffeeInWagon(wagonName)) {
+                System.out.println(coffee.toString());
             }
         }
     }
 
     private void printLoggerToLoadWagon() {
-        LOGGER.info("Started method 'loadWagon' " +
-                "with arguments 'name' and 'maxPrice', " +
+        LOGGER.info("Starting of loading wagon " +
+                "with arguments and 'maxPrice', " +
                 "which should load created earlier wagon with coffee.");
     }
 
@@ -76,8 +87,10 @@ public class Loading {
     public String chooseNameOfLoadingCoffee() throws IOException {
         printLoggerToChooseNameOfLoadingCoffee();
         askNameOfLoadingCoffee();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));) {
-            String coffeeName = null;
+        String coffeeName = null;
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            coffeeName = null;
             String name = reader.readLine();
             if (name.equals("1")) {
                 coffeeName = "Barista";
@@ -87,7 +100,13 @@ public class Loading {
             }
             if (name.equals("3")) {
                 coffeeName = "Lavazza";
+            } else {
+                System.out.println("Something wrong. Try again!");
+                chooseNameOfLoadingCoffee();
             }
+            return coffeeName;
+        } catch (IOException e) {
+            e.printStackTrace();
             return coffeeName;
         }
     }
@@ -105,10 +124,33 @@ public class Loading {
                 "Press '3' if 'Lavazza'");
     }
 
-    public Condition chooseConditionOfLoadingCoffee() throws IOException {
+    public Condition chooseConditionOfLoadingCoffee() {
         printLoggerToChooseConditionOfLoadingCoffee();
         askConditionOfLoadingCoffee();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));) {
+
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            switch (reader.readLine()) {
+                case "1":
+                    return Condition.BEANS;
+                case "2":
+                    return Condition.GROUND;
+                case "3":
+                    return Condition.INSTANT_BAGS;
+                case "4":
+                    return Condition.INSTANT_CANS;
+                default:
+                    System.err.println("Incorrect number. Try again.");
+                    chooseConditionOfLoadingCoffee();
+                    return null;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+        /*try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));) {
             switch (reader.readLine()) {
                 case "1":
                     return Condition.BEANS;
@@ -122,20 +164,20 @@ public class Loading {
                     System.err.println("Incorrect number. Try again.");
                     return null;
             }
+        }*/
+
+
+        private void printLoggerToChooseConditionOfLoadingCoffee () {
+            LOGGER.info("Started method 'chooseConditionOfLoadingCoffee' " +
+                    "without arguments, where we should " +
+                    "choose one of four conditions of coffee");
+        }
+
+        public void askConditionOfLoadingCoffee () {
+            System.out.println("What condition of coffee?\n" +
+                    "Press '1' if 'BeansCoffee'\n" +
+                    "Press '2' if 'GroundCoffee'\n" +
+                    "Press '3' if 'InstantCoffeeInBags'\n" +
+                    "Press '4' if 'InstantCoffeeInCans'");
         }
     }
-
-    private void printLoggerToChooseConditionOfLoadingCoffee() {
-        LOGGER.info("Started method 'chooseConditionOfLoadingCoffee' " +
-                "without arguments, where we should " +
-                "choose one of four conditions of coffee");
-    }
-
-    public void askConditionOfLoadingCoffee() {
-        System.out.println("What condition of coffee?\n" +
-                "Press '1' if 'BeansCoffee'\n" +
-                "Press '2' if 'GroundCoffee'\n" +
-                "Press '3' if 'InstantCoffeeInBags'\n" +
-                "Press '4' if 'InstantCoffeeInCans'");
-    }
-}

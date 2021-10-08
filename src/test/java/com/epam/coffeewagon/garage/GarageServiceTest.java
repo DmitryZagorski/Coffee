@@ -10,8 +10,8 @@ class GarageServiceTest {
         GarageService garageService = new GarageService();
         garageService.addWagon("ff", 100.0);
 
-        Assert.assertTrue(Garage.getListOfWagon().size() == 1);
-        Assert.assertTrue(Garage.getListOfWagon().get(0).getName().equals("ff"));
-        Assert.assertTrue(Garage.getListOfWagon().get(0).getMaxPriceOfCargo() == 100);
+        Assert.assertEquals(1, Garage.getListOfWagon().size());
+        Assert.assertEquals("ff", Garage.getListOfWagon().get(0).getName());
+        Assert.assertEquals(100, Garage.getListOfWagon().get(0).getMaxPriceOfCargo(), 0.0);
     }
 }

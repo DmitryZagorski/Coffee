@@ -2,16 +2,25 @@ package com.epam.coffeewagon.store;
 
 import com.epam.coffeewagon.coffee.Coffee;
 import com.epam.coffeewagon.coffee.condition.Condition;
-import com.epam.coffeewagon.garage.GarageService;
-import org.apache.log4j.Logger;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.stream.JsonReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 public class StoreFileService implements StoreFileInterface {
 
-    private static final Logger LOGGER = Logger.getLogger(GarageService.class.getSimpleName());
+    Gson gson = new Gson();
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(StoreFileService.class.getSimpleName());
 
     private static final String FIRST_CONDITION_COFFEE_IN_STORE = "D:/java/Coffee/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt";
 
@@ -35,17 +44,18 @@ public class StoreFileService implements StoreFileInterface {
 
     public void writeFirstConditionOfStore() {
         printLoggerToWriteConditionOfStore();
-        try (FileOutputStream fos = new FileOutputStream(FIRST_CONDITION_COFFEE_IN_STORE);
-             ObjectOutputStream oos = new ObjectOutputStream(fos);) {
-            oos.writeObject(startCoffeeConditionList);
+
+        String shopsToJson = gson.toJson(startCoffeeConditionList);
+        try (FileWriter writer = new FileWriter(new File(FIRST_CONDITION_COFFEE_IN_STORE))) {
+            writer.write(shopsToJson);
         } catch (IOException e) {
             printIOExceptionLoggerConditionOfStore();
-            e.printStackTrace();
+            throw new IllegalStateException(e);
         }
     }
 
     private void printLoggerToWriteConditionOfStore() {
-        LOGGER.info("Started method 'writeFirstConditionOfStore'");
+        LOGGER.info("Starting of writing First Condition Of Store");
     }
 
     private void printIOExceptionLoggerConditionOfStore() {
@@ -56,25 +66,19 @@ public class StoreFileService implements StoreFileInterface {
     public List<Coffee> readFirstConditionOfStore() {
         printLoggerToReadConditionOfStore();
         List<Coffee> firstConditionalList = new ArrayList<>();
-        try (FileInputStream fis = new FileInputStream(FIRST_CONDITION_COFFEE_IN_STORE);
-             ObjectInputStream ois = new ObjectInputStream(fis);) {
-            firstConditionalList = (List<Coffee>) ois.readObject();
+
+        try (JsonReader jsonReader = new JsonReader(new FileReader(FIRST_CONDITION_COFFEE_IN_STORE))) {
+            Type type = new TypeToken<List<Coffee>>() {
+            }.getType();
+            return gson.fromJson(jsonReader, type);
         } catch (IOException e) {
             printIOExceptionLoggerConditionOfStore();
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            printNotFountExceptionLoggerToReadConditionOfStore();
-            e.printStackTrace();
+            throw new IllegalStateException();
         }
-        return firstConditionalList;
     }
 
     private void printLoggerToReadConditionOfStore() {
         LOGGER.info("Started method 'readFirstConditionOfStore'.");
     }
 
-    private void printNotFountExceptionLoggerToReadConditionOfStore() {
-        LOGGER.error("We can get an exception, " +
-                "if the class of our objects won't be found.");
-    }
 }

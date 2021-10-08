@@ -8,8 +8,8 @@ public interface StoreInterface {
 
     List<Coffee> getListOfCoffeeInStore();
 
-    List<Coffee> addCoffeeToStore(Coffee coffee);
+    void addCoffeeToStore(Coffee coffee);
 
-    List<Coffee> removeCoffeeFromStore(Coffee coffee);
+    void removeCoffeeFromStore(Coffee coffee);
 
 }

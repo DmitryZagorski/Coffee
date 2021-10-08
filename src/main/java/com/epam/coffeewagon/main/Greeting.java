@@ -14,10 +14,30 @@ public class Greeting {
     }
 
     public String chooseWagonName() throws IOException {
-        return new Communicator().getStringFromBufferedReader();
+        String name = "";
+        int count = 0;
+        while (name.equals("")) {
+            name = new Communicator().getStringFromBufferedReader();
+            count++;
+            if (count > 2) {
+                System.out.println("The name of your wagon will be 'Wally' ");
+                name = "Wally";
+            }
+        }
+        return name;
     }
 
     public Double chooseMaxPriceOfCargoInWagon() throws IOException {
-        return new Communicator().getDoubleFromBufferedReader();
+        double maxPrice = 0.0;
+        int count = 0;
+        while (maxPrice == 0.0) {
+            maxPrice = new Communicator().getDoubleFromBufferedReader();
+            count++;
+            if (count > 2) {
+                System.out.println("MaxPrice of your cargo will be 500. ");
+                maxPrice = 500;
+            }
+        }
+        return maxPrice;
     }
 }

@@ -2,9 +2,6 @@ package com.epam.coffeewagon.wagon;
 
 import com.epam.coffeewagon.coffee.Coffee;
 import com.epam.coffeewagon.coffee.condition.Condition;
-import com.epam.coffeewagon.garage.Garage;
-import com.epam.coffeewagon.garage.GarageService;
-import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
