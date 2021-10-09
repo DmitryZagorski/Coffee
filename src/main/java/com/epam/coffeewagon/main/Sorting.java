@@ -15,14 +15,10 @@ public class Sorting {
     private static final Logger LOGGER = LoggerFactory.getLogger(Sorting.class.getSimpleName());
 
     public void sortCargos(List<Coffee> list) {
-        printLoggerToSortCargo();
+        LOGGER.info("Start of sorting coffee in wagon");
         printSortingMessage();
         sortItems(list);
         printItems(list);
-    }
-
-    private void printLoggerToSortCargo() {
-        LOGGER.info("Starting sorting of coffee in wagon");
     }
 
     private void printSortingMessage() {
@@ -32,8 +28,7 @@ public class Sorting {
                         "Press '2' if you want to sort it by price.\n" +
                         "Press '3' if you want to sort it by weight.\n" +
                         "Press '4' if you want to sort it by priceToWeight.\n" +
-                        "Press '5' if you want to sort it by name then by price."
-        );
+                        "Press '5' if you want to sort it by name then by price.");
     }
 
     private void sortItems(List<Coffee> list) {

@@ -1,0 +1,6 @@
+com\epam\coffeewagon\store\StoreFileServiceTest.class
+com\epam\coffeewagon\wagon\WagonServiceTest.class
+com\epam\coffeewagon\main\LoadingTest.class
+com\epam\coffeewagon\store\StoreServiceTest.class
+com\epam\coffeewagon\garage\GarageServiceTest.class
+com\epam\coffeewagon\main\SortingTest.class

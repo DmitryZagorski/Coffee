@@ -28,44 +28,70 @@ public class Loading {
         }
     }
 
-    public void loadWagon(String wagonName, Double maxPrice) {
+    public void loadWagon(String wagonName, Double maxPrice) throws IOException {
         LOGGER.info("Starting of loading wagon named '{}' and with max price of cargo '{}'.", wagonName, maxPrice);
         printInfoBeforeLoadWagon();
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            {
-                switch (reader.readLine()) {
-                    case "1":
-                        wagonServiceInterface.addCoffeeToWagonAutomatically(wagonName, maxPrice);
-                        System.out.println("List of coffee in wagon: ");
-                        for (Coffee coffee : wagonServiceInterface.getListOfCoffeeInWagon(wagonName)) {
-                            System.out.println(coffee.toString());
-                        }
-                        break;
-                    case "2":
-                        loadManuallyInCase2(wagonName);
-                        break;
-                    default:
-                        System.err.println("Incorrect number. Try again.");
+        int count = 0;
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        String choice = "";
+        while (choice.equals("")) {
+            choice = reader.readLine();
+            if (choice.equals("1")) {
+                wagonServiceInterface.addCoffeeToWagonAutomatically(wagonName, maxPrice);
+                System.out.println("List of coffee in wagon: ");
+                for (Coffee coffee : wagonServiceInterface.getListOfCoffeeInWagon(wagonName)) {
+                    System.out.println(coffee.toString());
                 }
+                break;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+            if (choice.equals("2")) {
+                loadManuallyInCase2(wagonName);
+                break;
+            }
+            if (count > 2) {
+                LOGGER.info("Wagon will be loaded automatically.");
+                wagonServiceInterface.addCoffeeToWagonAutomatically(wagonName, maxPrice);
+                break;
+            } else {
+                System.err.println("Incorrect number. Try again.");
+                count++;
+                choice = "";
+            }
         }
     }
 
     private void loadManuallyInCase2(String wagonName) throws IOException {
         System.out.println("Press '1' to add the coffee.\n" +
                 "Press '2' to STOP.");
-        String newString = new Communicator().getStringFromBufferedReader();
-        if (newString.equals("1")) {
-            wagonServiceInterface.addCoffeeToWagonManually(wagonName, chooseNameOfLoadingCoffee(), chooseConditionOfLoadingCoffee());
-            loadManuallyInCase2(wagonName);
-        }
-        if (newString.equals("2")) {
-            System.out.println("List of coffee in wagon: ");
-            for (Coffee coffee : wagonServiceInterface.getListOfCoffeeInWagon(wagonName)) {
-                System.out.println(coffee.toString());
+        String newString = "";
+        int count = 0;
+        while (newString.equals("")) {
+            newString = new Communicator().getStringFromBufferedReader();
+            if (newString.equals("1")) {
+                wagonServiceInterface.addCoffeeToWagonManually(wagonName, chooseNameOfLoadingCoffee(), chooseConditionOfLoadingCoffee());
+                loadManuallyInCase2(wagonName);
+                break;
+            }
+            if (newString.equals("2")) {
+                System.out.println("List of coffee in wagon: ");
+                for (Coffee coffee : wagonServiceInterface.getListOfCoffeeInWagon(wagonName)) {
+                    System.out.println(coffee.toString());
+                }
+                break;
+            }
+            if (count > 2) {
+                System.out.println("Variant 'STOP' was chosen automatically.");
+                System.out.println("List of coffee in wagon: ");
+                for (Coffee coffee : wagonServiceInterface.getListOfCoffeeInWagon(wagonName)) {
+                    System.out.println(coffee.toString());
+                }
+                break;
+            } else {
+                System.err.println("Incorrect number. Try again.");
+                count++;
+                newString = "";
             }
         }
     }
@@ -80,28 +106,34 @@ public class Loading {
     public String chooseNameOfLoadingCoffee() throws IOException {
         LOGGER.info("Start of choosing one of three names of coffee.");
         askNameOfLoadingCoffee();
-        String coffeeName = null;
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            coffeeName = null;
-            String name = reader.readLine();
+        String name = "";
+        String coffeeName = "";
+        int count = 0;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        while (name.equals("")) {
+            name = reader.readLine();
             if (name.equals("1")) {
                 coffeeName = "Barista";
+                break;
             }
             if (name.equals("2")) {
                 coffeeName = "Dallmayr";
+                break;
             }
             if (name.equals("3")) {
                 coffeeName = "Lavazza";
-            } else {
-                System.out.println("Something wrong. Try again!");
-                chooseNameOfLoadingCoffee();
+                break;
             }
-            return coffeeName;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return coffeeName;
+            if (count > 2) {
+                System.out.println("Name 'Barista' was chosen automatically.");
+                coffeeName = "Barista";
+                break;
+            } else {
+                count++;
+                System.out.println("Something wrong. Try again!");
+            }
         }
+        return coffeeName;
     }
 
     public void askNameOfLoadingCoffee() {
@@ -111,29 +143,42 @@ public class Loading {
                 "Press '3' if 'Lavazza'");
     }
 
-    public Condition chooseConditionOfLoadingCoffee() {
+    public Condition chooseConditionOfLoadingCoffee() throws IOException {
         LOGGER.info("Start of choosing one of four conditions of coffee.");
         askConditionOfLoadingCoffee();
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            switch (reader.readLine()) {
-                case "1":
-                    return Condition.BEANS;
-                case "2":
-                    return Condition.GROUND;
-                case "3":
-                    return Condition.INSTANT_BAGS;
-                case "4":
-                    return Condition.INSTANT_CANS;
-                default:
-                    System.err.println("Incorrect number. Try again.");
-                    chooseConditionOfLoadingCoffee();
-                    return null;
+        Condition condition = null;
+        int count = 0;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String choice = "";
+        while (choice.equals("")) {
+            choice = reader.readLine();
+            if (choice.equals("1")) {
+                condition = Condition.BEANS;
+                break;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+            if (choice.equals("2")) {
+                condition = Condition.GROUND;
+                break;
+            }
+            if (choice.equals("3")) {
+                condition = Condition.INSTANT_BAGS;
+                break;
+            }
+            if (choice.equals("4")) {
+                condition = Condition.INSTANT_CANS;
+                break;
+            }
+            if (count > 2){
+                System.out.println("Condition 'BeansCoffee' was chosen automatically.");
+                condition = Condition.BEANS;
+                break;
+            }
+            else{
+                System.err.println("Incorrect number. Try again.");
+                count++;
+            }
         }
+        return condition;
     }
 
     public void askConditionOfLoadingCoffee() {
