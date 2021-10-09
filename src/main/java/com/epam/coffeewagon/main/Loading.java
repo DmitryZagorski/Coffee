@@ -29,7 +29,7 @@ public class Loading {
     }
 
     public void loadWagon(String wagonName, Double maxPrice) {
-        printLoggerToLoadWagon();
+        LOGGER.info("Starting of loading wagon named '{}' and with max price of cargo '{}'.", wagonName, maxPrice);
         printInfoBeforeLoadWagon();
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -57,7 +57,6 @@ public class Loading {
     private void loadManuallyInCase2(String wagonName) throws IOException {
         System.out.println("Press '1' to add the coffee.\n" +
                 "Press '2' to STOP.");
-
         String newString = new Communicator().getStringFromBufferedReader();
         if (newString.equals("1")) {
             wagonServiceInterface.addCoffeeToWagonManually(wagonName, chooseNameOfLoadingCoffee(), chooseConditionOfLoadingCoffee());
@@ -71,12 +70,6 @@ public class Loading {
         }
     }
 
-    private void printLoggerToLoadWagon() {
-        LOGGER.info("Starting of loading wagon " +
-                "with arguments and 'maxPrice', " +
-                "which should load created earlier wagon with coffee.");
-    }
-
     public void printInfoBeforeLoadWagon() {
         System.out.println("Now you can load the wagon with coffee.\n" +
                 "It's price shouldn't be more than max price of cargo in wagon.\n" +
@@ -85,7 +78,7 @@ public class Loading {
     }
 
     public String chooseNameOfLoadingCoffee() throws IOException {
-        printLoggerToChooseNameOfLoadingCoffee();
+        LOGGER.info("Start of choosing one of three names of coffee.");
         askNameOfLoadingCoffee();
         String coffeeName = null;
         try {
@@ -111,12 +104,6 @@ public class Loading {
         }
     }
 
-    private void printLoggerToChooseNameOfLoadingCoffee() {
-        LOGGER.info("Started method 'chooseNameOfLoadingCoffee' " +
-                "without arguments, where we should " +
-                "choose one of three names of coffee");
-    }
-
     public void askNameOfLoadingCoffee() {
         System.out.println("What name of coffee?\n" +
                 "Press '1' if 'Barista'\n" +
@@ -125,9 +112,8 @@ public class Loading {
     }
 
     public Condition chooseConditionOfLoadingCoffee() {
-        printLoggerToChooseConditionOfLoadingCoffee();
+        LOGGER.info("Start of choosing one of four conditions of coffee.");
         askConditionOfLoadingCoffee();
-
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             switch (reader.readLine()) {
@@ -150,34 +136,11 @@ public class Loading {
         }
     }
 
-        /*try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));) {
-            switch (reader.readLine()) {
-                case "1":
-                    return Condition.BEANS;
-                case "2":
-                    return Condition.GROUND;
-                case "3":
-                    return Condition.INSTANT_BAGS;
-                case "4":
-                    return Condition.INSTANT_CANS;
-                default:
-                    System.err.println("Incorrect number. Try again.");
-                    return null;
-            }
-        }*/
-
-
-        private void printLoggerToChooseConditionOfLoadingCoffee () {
-            LOGGER.info("Started method 'chooseConditionOfLoadingCoffee' " +
-                    "without arguments, where we should " +
-                    "choose one of four conditions of coffee");
-        }
-
-        public void askConditionOfLoadingCoffee () {
-            System.out.println("What condition of coffee?\n" +
-                    "Press '1' if 'BeansCoffee'\n" +
-                    "Press '2' if 'GroundCoffee'\n" +
-                    "Press '3' if 'InstantCoffeeInBags'\n" +
-                    "Press '4' if 'InstantCoffeeInCans'");
-        }
+    public void askConditionOfLoadingCoffee() {
+        System.out.println("What condition of coffee?\n" +
+                "Press '1' if 'BeansCoffee'\n" +
+                "Press '2' if 'GroundCoffee'\n" +
+                "Press '3' if 'InstantCoffeeInBags'\n" +
+                "Press '4' if 'InstantCoffeeInCans'");
     }
+}

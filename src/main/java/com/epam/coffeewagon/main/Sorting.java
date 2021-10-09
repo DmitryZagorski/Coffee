@@ -91,6 +91,4 @@ public class Sorting {
         list.sort(Comparator.comparing(Coffee::getName).thenComparing(Coffee::getPrice));
         return list;
     }
-
-
 }

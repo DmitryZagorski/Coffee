@@ -27,58 +27,41 @@ public class StoreFileService implements StoreFileInterface {
     List<Coffee> startCoffeeConditionList = new ArrayList<>();
 
     {
-        startCoffeeConditionList.add(new Coffee("Barista", Condition.BEANS, 1.0, 2.0, 10.0));
-        startCoffeeConditionList.add(new Coffee("Barista", Condition.GROUND, 0.5, 1.0, 15.0));
-        startCoffeeConditionList.add(new Coffee("Barista", Condition.INSTANT_BAGS, 0.5, 2.0, 25.0));
-        startCoffeeConditionList.add(new Coffee("Barista", Condition.INSTANT_CANS, 1.0, 1.0, 20.0));
-        startCoffeeConditionList.add(new Coffee("Dallmayr", Condition.BEANS, 1.0, 2.0, 12.0));
-        startCoffeeConditionList.add(new Coffee("Dallmayr", Condition.GROUND, 0.5, 1.0, 17.0));
-        startCoffeeConditionList.add(new Coffee("Dallmayr", Condition.INSTANT_BAGS, 0.5, 2.0, 27.0));
-        startCoffeeConditionList.add(new Coffee("Dallmayr", Condition.INSTANT_CANS, 1.0, 1.0, 22.0));
-        startCoffeeConditionList.add(new Coffee("Lavazza", Condition.BEANS, 1.0, 2.0, 20.0));
-        startCoffeeConditionList.add(new Coffee("Lavazza", Condition.GROUND, 0.5, 1.0, 30.0));
-        startCoffeeConditionList.add(new Coffee("Lavazza", Condition.INSTANT_BAGS, 0.5, 2.0, 40.0));
-        startCoffeeConditionList.add(new Coffee("Lavazza", Condition.INSTANT_CANS, 1.0, 1.0, 35.0));
+        startCoffeeConditionList.add(new Coffee("Barista", Condition.BEANS, 1.0, 0.1, 10.0));
+        startCoffeeConditionList.add(new Coffee("Barista", Condition.GROUND, 0.5, 0.1, 15.0));
+        startCoffeeConditionList.add(new Coffee("Barista", Condition.INSTANT_BAGS, 0.5, 0.2, 25.0));
+        startCoffeeConditionList.add(new Coffee("Barista", Condition.INSTANT_CANS, 1.0, 0.2, 20.0));
+        startCoffeeConditionList.add(new Coffee("Dallmayr", Condition.BEANS, 1.0, 0.1, 12.0));
+        startCoffeeConditionList.add(new Coffee("Dallmayr", Condition.GROUND, 0.5, 0.1, 17.0));
+        startCoffeeConditionList.add(new Coffee("Dallmayr", Condition.INSTANT_BAGS, 0.5, 0.2, 27.0));
+        startCoffeeConditionList.add(new Coffee("Dallmayr", Condition.INSTANT_CANS, 1.0, 0.2, 22.0));
+        startCoffeeConditionList.add(new Coffee("Lavazza", Condition.BEANS, 1.0, 0.1, 20.0));
+        startCoffeeConditionList.add(new Coffee("Lavazza", Condition.GROUND, 0.5, 0.1, 30.0));
+        startCoffeeConditionList.add(new Coffee("Lavazza", Condition.INSTANT_BAGS, 0.5, 0.2, 40.0));
+        startCoffeeConditionList.add(new Coffee("Lavazza", Condition.INSTANT_CANS, 1.0, 0.2, 35.0));
 
     }
 
     public void writeFirstConditionOfStore() {
-        printLoggerToWriteConditionOfStore();
-
+        LOGGER.info("Writing First Condition Of Store to file");
         String shopsToJson = gson.toJson(startCoffeeConditionList);
         try (FileWriter writer = new FileWriter(new File(FIRST_CONDITION_COFFEE_IN_STORE))) {
             writer.write(shopsToJson);
         } catch (IOException e) {
-            printIOExceptionLoggerConditionOfStore();
+            LOGGER.error("IllegalState exception, cause file won't be found");
             throw new IllegalStateException(e);
         }
     }
 
-    private void printLoggerToWriteConditionOfStore() {
-        LOGGER.info("Starting of writing First Condition Of Store");
-    }
-
-    private void printIOExceptionLoggerConditionOfStore() {
-        LOGGER.error("We can get an exception, " +
-                "if file won't be found");
-    }
-
     public List<Coffee> readFirstConditionOfStore() {
-        printLoggerToReadConditionOfStore();
-        List<Coffee> firstConditionalList = new ArrayList<>();
-
+        LOGGER.info("Reading First Condition Of Store from file");
         try (JsonReader jsonReader = new JsonReader(new FileReader(FIRST_CONDITION_COFFEE_IN_STORE))) {
             Type type = new TypeToken<List<Coffee>>() {
             }.getType();
             return gson.fromJson(jsonReader, type);
         } catch (IOException e) {
-            printIOExceptionLoggerConditionOfStore();
+            LOGGER.error("IllegalState exception, cause file won't be found");
             throw new IllegalStateException();
         }
     }
-
-    private void printLoggerToReadConditionOfStore() {
-        LOGGER.info("Started method 'readFirstConditionOfStore'.");
-    }
-
 }

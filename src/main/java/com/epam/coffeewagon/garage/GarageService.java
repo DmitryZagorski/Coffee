@@ -11,7 +11,7 @@ public class GarageService implements GarageServiceInterface {
     private static final Logger LOGGER = LoggerFactory.getLogger(GarageService.class.getSimpleName());
 
     public void addWagon(String name, Double maxPriceOfCargo) {
-        LOGGER.info("Starting of adding new wagon by name as {} and with maximal price of cargo equals {} .", name, maxPriceOfCargo );
+        LOGGER.info("Starting of adding new wagon with name '{}' and with maximal price of cargo equals '{}' .", name, maxPriceOfCargo );
         getListOfWagon().add(new Wagon(name, maxPriceOfCargo));
     }
 

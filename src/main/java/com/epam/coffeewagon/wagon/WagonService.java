@@ -16,7 +16,7 @@ public class WagonService implements WagonServiceInterface {
     private static final Logger LOGGER = LoggerFactory.getLogger(WagonService.class.getSimpleName());
 
     public Double getCurrentCapacityOfCargoInWagon(String name) {
-        printLoggerToGettingCapacity();
+        LOGGER.info("Getting current capacity of cargo in wagon.");
         double currentCapacity = 0;
         for (Wagon wagon : Garage.getListOfWagon()) {
             if (wagon.getName().equals(name)) {
@@ -29,12 +29,8 @@ public class WagonService implements WagonServiceInterface {
         return currentCapacity;
     }
 
-    private void printLoggerToGettingCapacity() {
-        LOGGER.info("Getting current capacity of cargo in wagon.");
-    }
-
     public Double getCurrentWeightOfCargoInWagon(String name) {
-        printLoggerToGettingWeight();
+        LOGGER.info("Getting current weight of cargo in wagon.");
         double currentWeight = 0;
         for (Wagon wagon : Garage.getListOfWagon()) {
             if (wagon.getName().equals(name)) {
@@ -47,12 +43,8 @@ public class WagonService implements WagonServiceInterface {
         return currentWeight;
     }
 
-    private void printLoggerToGettingWeight() {
-        LOGGER.info("Getting current weight of cargo in wagon.");
-    }
-
     public Double getCurrentPriceOfCargoInWagon(String name) {
-        printLoggerToGettingPrice();
+        LOGGER.info("Getting current price of cargo in wagon.");
         double currentPrice = 0;
         for (Wagon wagon : Garage.getListOfWagon()) {
             if (wagon.getName().equals(name)) {
@@ -65,12 +57,8 @@ public class WagonService implements WagonServiceInterface {
         return currentPrice;
     }
 
-    private void printLoggerToGettingPrice() {
-        LOGGER.info("Getting current price of cargo in wagon.");
-    }
-
     public void addCoffeeToWagon(String wagonName, Coffee coffee) {
-        printLoggerToAddingCoffeeToWagon();
+        LOGGER.info("Adding new coffee '{}' to wagon, named {}", coffee, wagonName);
         for (Wagon wagon : Garage.getListOfWagon()) {
             if (wagon.getName().equals(wagonName)) {
                 if (coffee.getWeight() <= getCurrentWeightOfCargoInWagon(wagonName) &&
@@ -90,13 +78,8 @@ public class WagonService implements WagonServiceInterface {
         }
     }
 
-    private void printLoggerToAddingCoffeeToWagon() {
-        LOGGER.info("Started method 'addCoffeeToWagon' " +
-                "with arguments 'wagonName' and 'coffee'");
-    }
-
     public void addCoffeeToWagonManually(String wagonName, String coffeeName, Condition condition) {
-        printLoggerToAddingCoffeeToWagonManually();
+        LOGGER.info("Adding manually coffee {} in condition {} to wagon, named {}.", coffeeName, condition, wagonName);
         for (Wagon wagon : Garage.getListOfWagon()) {
             if (wagon.getName().equals(wagonName)) {
                 for (Coffee coffee : new StoreService().getListOfCoffeeInStore()) {
@@ -119,13 +102,8 @@ public class WagonService implements WagonServiceInterface {
         }
     }
 
-    private void printLoggerToAddingCoffeeToWagonManually() {
-        LOGGER.info("Started method 'addCoffeeToWagonManually' " +
-                "with arguments 'wagonName', 'coffeeName' and 'condition'");
-    }
-
     public void removeCoffeeFromWagon(String wagonName, Coffee coffee) {
-        printLoggerToRemoveCoffeeFromWagon();
+        LOGGER.info("Removing coffee {} from wagon, named {}", coffee, wagonName);
         for (Wagon wagon : Garage.getListOfWagon()) {
             if (wagon.getName().equals(wagonName)) {
                 for (Coffee coffee1 : wagon.getCargoList()) {
@@ -141,13 +119,8 @@ public class WagonService implements WagonServiceInterface {
         }
     }
 
-    private void printLoggerToRemoveCoffeeFromWagon() {
-        LOGGER.info("Started method 'removeCoffeeFromWagon' " +
-                "with arguments 'wagonName' and 'coffee'");
-    }
-
     public List<Coffee> getListOfCoffeeInWagon(String wagonName) {
-        printLoggerToGettingListOfCoffeeInWagon();
+        LOGGER.info("Getting list of coffee in wagon, named {}", wagonName);
         List<Coffee> coffeeList = new ArrayList<>();
         int firstSize = coffeeList.size();
         for (Wagon wagon : Garage.getListOfWagon()) {
@@ -164,16 +137,11 @@ public class WagonService implements WagonServiceInterface {
         return coffeeList;
     }
 
-    private void printLoggerToGettingListOfCoffeeInWagon() {
-        LOGGER.info("Started method 'removeCoffeeFromWagon' " +
-                "with arguments 'wagonName' and 'coffee'");
-    }
-
     public void addCoffeeToWagonAutomatically(String wagonName, double maxPriceInWagon) {
-        printLoggerToAddingCoffeeToWagonAutomatically();
-        Coffee first = new Coffee("Barista", Condition.BEANS, 1.0, 2.0, 10.0);
-        Coffee second = new Coffee("Dallmayr", Condition.GROUND, 0.5, 1.0, 17.0);
-        Coffee third = new Coffee("Lavazza", Condition.INSTANT_BAGS, 0.5, 2.0, 40.0);
+        LOGGER.info("Adding coffee automatically to wagon, named {} with max price of cargo equals {}", wagonName, maxPriceInWagon);
+        Coffee first = new Coffee("Barista", Condition.BEANS, 1.0, 0.1, 10.0);
+        Coffee second = new Coffee("Dallmayr", Condition.GROUND, 0.5, 0.1, 17.0);
+        Coffee third = new Coffee("Lavazza", Condition.INSTANT_BAGS, 0.5, 0.2, 40.0);
 
         addCoffeeAfterCheckingPrice(wagonName, first, maxPriceInWagon);
         addCoffeeAfterCheckingPrice(wagonName, second, maxPriceInWagon);
@@ -187,13 +155,8 @@ public class WagonService implements WagonServiceInterface {
                 "Free capacity : " + getCurrentCapacityOfCargoInWagon(wagonName));
     }
 
-    private void printLoggerToAddingCoffeeToWagonAutomatically() {
-        LOGGER.info("Started method 'addCoffeeToWagonAutomatically' " +
-                "with arguments 'wagonName' and 'maxPriceInWagon'");
-    }
-
     private void addCoffeeAfterCheckingPrice(String wagonName, Coffee coffee, double maxPriceInWagon) {
-        printLoggerToAddingCoffeeAfterCheckingPrice();
+        LOGGER.info("Checking free price in wagon, named {} with max price of cargo '{}' before adding new coffee '{}'", wagonName, maxPriceInWagon, coffee);
         int price = (int) maxPriceInWagon / 3;
         for (int i = 0; i < price / coffee.getPrice(); i++) {
             if (findCheepCoffeeInStore().getPrice() <= getCurrentPriceOfCargoInWagon(wagonName) &&
@@ -203,22 +166,11 @@ public class WagonService implements WagonServiceInterface {
         }
     }
 
-    private void printLoggerToAddingCoffeeAfterCheckingPrice() {
-        LOGGER.info("Started method 'addCoffeeAfterCheckingPrice' " +
-                "with arguments 'wagonName', 'coffee' and 'maxPriceInWagon'");
-    }
-
     public Coffee findCheepCoffeeInStore() {
-        printLoggerToFindingCheepCoffeeInStore();
+        LOGGER.info("Finding most cheep coffee int store.");
         Coffee cheepCoffee;
         List<Coffee> sortedList = new Sorting().sortByName(new StoreService().getListOfCoffeeInStore());
         cheepCoffee = sortedList.get(0);
         return cheepCoffee;
     }
-
-    private void printLoggerToFindingCheepCoffeeInStore() {
-        LOGGER.info("Started method 'findCheepCoffeeInStore' " +
-                "without arguments");
-    }
-
 }

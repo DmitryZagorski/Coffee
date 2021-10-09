@@ -28,14 +28,20 @@ public class Greeting {
     }
 
     public Double chooseMaxPriceOfCargoInWagon() throws IOException {
+
         double maxPrice = 0.0;
         int count = 0;
         while (maxPrice == 0.0) {
-            maxPrice = new Communicator().getDoubleFromBufferedReader();
-            count++;
-            if (count > 2) {
-                System.out.println("MaxPrice of your cargo will be 500. ");
-                maxPrice = 500;
+            try {
+                if (count > 2) {
+                    System.out.println("MaxPrice of your cargo will be 500. ");
+                    maxPrice = 500.0;
+                    break;
+                }
+                maxPrice = new Communicator().getDoubleFromBufferedReader();
+            } catch (NumberFormatException e) {
+                count++;
+                System.out.println("Wrong data.Try again");
             }
         }
         return maxPrice;

@@ -2,43 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddbaf097-8380-4c8d-9d85-13ccab8f8011" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/garage/GarageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/garage/GarageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Communicator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Greeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Loading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Loading.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Sorting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreFileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/garage/GarageServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/garage/GarageServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/LoadingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/LoadingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/SortingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/SortingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreFileServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreFileServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/wagon/WagonServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/wagon/WagonServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/coffee/Coffee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/coffee/condition/Condition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/garage/Garage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/garage/GarageService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/garage/GarageServiceInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/main/Greeting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/main/Loading.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/main/Sorting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/Store.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/StoreFileInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/StoreFileService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/StoreInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/store/StoreService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wagon/Wagon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wagon/WagonService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wagon/WagonServiceInterface.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,38 +219,38 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="267" y="66" key="#xdebugger.evaluate/0.0.1024.728@0.0.1024.728" timestamp="1633155779540" />
-    <state width="980" height="174" key="GridCell.Tab.0.bottom" timestamp="1633639531969">
+    <state width="980" height="174" key="GridCell.Tab.0.bottom" timestamp="1633762232132">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="174" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633639531969" />
-    <state width="980" height="174" key="GridCell.Tab.0.center" timestamp="1633639531969">
+    <state width="980" height="174" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633762232132" />
+    <state width="980" height="174" key="GridCell.Tab.0.center" timestamp="1633762232132">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="174" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1633639531969" />
-    <state width="980" height="174" key="GridCell.Tab.0.left" timestamp="1633639531969">
+    <state width="980" height="174" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1633762232132" />
+    <state width="980" height="174" key="GridCell.Tab.0.left" timestamp="1633762232132">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="174" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1633639531969" />
-    <state width="980" height="174" key="GridCell.Tab.0.right" timestamp="1633639531969">
+    <state width="980" height="174" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1633762232132" />
+    <state width="980" height="174" key="GridCell.Tab.0.right" timestamp="1633762232132">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="174" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1633639531969" />
-    <state width="980" height="216" key="GridCell.Tab.1.bottom" timestamp="1633554648808">
+    <state width="980" height="174" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1633762232132" />
+    <state width="980" height="216" key="GridCell.Tab.1.bottom" timestamp="1633761617111">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633554648808" />
-    <state width="980" height="216" key="GridCell.Tab.1.center" timestamp="1633554648808">
+    <state width="980" height="216" key="GridCell.Tab.1.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633761617111" />
+    <state width="980" height="216" key="GridCell.Tab.1.center" timestamp="1633761617111">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.center/0.0.1024.728@0.0.1024.728" timestamp="1633554648808" />
-    <state width="980" height="216" key="GridCell.Tab.1.left" timestamp="1633554648808">
+    <state width="980" height="216" key="GridCell.Tab.1.center/0.0.1024.728@0.0.1024.728" timestamp="1633761617111" />
+    <state width="980" height="216" key="GridCell.Tab.1.left" timestamp="1633761617110">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.left/0.0.1024.728@0.0.1024.728" timestamp="1633554648808" />
-    <state width="980" height="216" key="GridCell.Tab.1.right" timestamp="1633554648808">
+    <state width="980" height="216" key="GridCell.Tab.1.left/0.0.1024.728@0.0.1024.728" timestamp="1633761617110" />
+    <state width="980" height="216" key="GridCell.Tab.1.right" timestamp="1633761617111">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.right/0.0.1024.728@0.0.1024.728" timestamp="1633554648808" />
+    <state width="980" height="216" key="GridCell.Tab.1.right/0.0.1024.728@0.0.1024.728" timestamp="1633761617111" />
     <state x="42" y="18" key="Maven.ArtifactSearchDialog" timestamp="1633185836599">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
@@ -285,10 +259,10 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1633185453948" />
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1633625434200">
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1633724696152">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1633625434200" />
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1633724696152" />
     <state x="216" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1633185431464">
       <screen x="0" y="0" width="1024" height="728" />
     </state>

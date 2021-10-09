@@ -19,7 +19,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        LOGGER.info("Our program {} started", "'Coffee'");
+        LOGGER.info("Our program is started");
 
         StoreFileInterface storeFileInterface = new StoreFileService();
 

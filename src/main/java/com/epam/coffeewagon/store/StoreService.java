@@ -27,7 +27,7 @@ public class StoreService implements StoreInterface {
     }
 
     public void removeCoffeeFromStore(Coffee coffee) {
-        printLoggerToRemoveCoffeeFromStore();
+        LOGGER.info("Removing coffee '{}' from store", coffee);
         for (int i = 0; i < getListOfCoffeeInStore().size(); i++) {
             if (coffee.getName().equals(getListOfCoffeeInStore().get(i).getName()) &&
                     coffee.getPrice() == getListOfCoffeeInStore().get(i).getPrice() &&
@@ -39,10 +39,5 @@ public class StoreService implements StoreInterface {
                         coffee.getCapacity());
             }
         }
-    }
-
-    private void printLoggerToRemoveCoffeeFromStore() {
-        LOGGER.info("Started method 'removeCoffeeFromStore' " +
-                "with argument 'Coffee'");
     }
 }

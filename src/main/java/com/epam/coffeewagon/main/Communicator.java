@@ -3,6 +3,7 @@ package com.epam.coffeewagon.main;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Communicator {
 
@@ -11,8 +12,9 @@ public class Communicator {
         return reader.readLine();
     }
 
-    public Double getDoubleFromBufferedReader() throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        return Double.parseDouble(reader.readLine());
+    public double getDoubleFromBufferedReader() {
+        Scanner scanner = new Scanner(System.in);
+        return Double.parseDouble(scanner.nextLine());
+
     }
 }
