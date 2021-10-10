@@ -146,7 +146,7 @@ public class WagonService implements WagonServiceInterface {
         addCoffeeAfterCheckingPrice(wagonName, second, maxPriceInWagon);
         addCoffeeAfterCheckingPrice(wagonName, third, maxPriceInWagon);
 
-        if (findCheepCoffeeInStore().getPrice() < getCurrentPriceOfCargoInWagon(wagonName)) {
+        while (findCheepCoffeeInStore().getPrice() < getCurrentPriceOfCargoInWagon(wagonName)) {
             addCoffeeToWagon(wagonName, findCheepCoffeeInStore());
         }
         System.out.println("Free price : " + getCurrentPriceOfCargoInWagon(wagonName) + "\n" +
