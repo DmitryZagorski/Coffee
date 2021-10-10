@@ -53,29 +53,3 @@ public class Main {
         LOGGER.info("Our program is ended");
     }
 }
-
-/*
-<plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <executions>
-            <execution>
-              <phase>package</phase>
-              <goals>
-                <goal>single</goal>
-              </goals>
-              <configuration>
-                <archive>
-                  <manifest>
-                    <addClasspath>true</addClasspath>
-                    <mainClass>com/epam/coffeewagon/main/Main</mainClass>
-                  </manifest>
-                </archive>
-                <descriptorRefs>
-                  <descriptorRef>jar-with-dependencies</descriptorRef>
-                </descriptorRefs>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
- */

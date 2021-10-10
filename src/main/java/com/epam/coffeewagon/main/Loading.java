@@ -6,9 +6,7 @@ import com.epam.coffeewagon.wagon.WagonServiceInterface;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.List;
 
 public class Loading {
@@ -61,7 +59,7 @@ public class Loading {
 
     private void loadManuallyInCase2(String wagonName) throws IOException {
         System.out.println("Press '1' to add the coffee.\n" +
-                "Press '2' to STOP.");
+                           "Press '2' to STOP.");
         String newString = "";
         int count = 0;
         while (newString.equals("")) {
@@ -163,12 +161,11 @@ public class Loading {
                 condition = Condition.INSTANT_CANS;
                 break;
             }
-            if (count > 2){
+            if (count > 2) {
                 System.out.println("Condition 'BeansCoffee' was chosen automatically.");
                 condition = Condition.BEANS;
                 break;
-            }
-            else{
+            } else {
                 System.err.println("Incorrect number. Try again.");
                 count++;
             }
