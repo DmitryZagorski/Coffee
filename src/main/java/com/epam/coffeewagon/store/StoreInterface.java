@@ -10,6 +10,4 @@ public interface StoreInterface {
 
     void addCoffeeToStore(Coffee coffee);
 
-    void removeCoffeeFromStore(Coffee coffee);
-
 }

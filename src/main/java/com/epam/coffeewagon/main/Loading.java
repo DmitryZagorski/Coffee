@@ -32,9 +32,7 @@ public class Loading {
         LOGGER.info("Starting of loading wagon named '{}' and with max price of cargo '{}'.", wagonName, maxPrice);
         printInfoBeforeLoadWagon();
         int count = 0;
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
         String choice = "";
         while (choice.equals("")) {
             choice = reader.readLine();

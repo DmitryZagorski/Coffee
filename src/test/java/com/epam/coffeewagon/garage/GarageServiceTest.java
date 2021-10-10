@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class GarageServiceTest {
 
     @Test
-    void addWagon() {
+    void should_add_new_wagon_to_list_of_wagon() {
         GarageService garageService = new GarageService();
         garageService.addWagon("ff", 100.0);
 

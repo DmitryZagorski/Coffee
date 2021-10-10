@@ -22,7 +22,7 @@ public class StoreFileService implements StoreFileInterface {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StoreFileService.class.getSimpleName());
 
-    private static final String FIRST_CONDITION_COFFEE_IN_STORE = "D:/java/Coffee/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt";
+    private static final String FIRST_CONDITION_COFFEE_IN_STORE = ".\\src\\main\\java\\com\\epam\\coffeewagon\\store\\FirstCoffeeListInStore.gson";
 
     List<Coffee> startCoffeeConditionList = new ArrayList<>();
 

@@ -11,7 +11,7 @@ import java.util.List;
 class SortingTest {
 
     @Test
-    void sortByName() {
+    void should_sort_list_by_name() {
 
         Coffee coffee1 = new Coffee("Ka", Condition.INSTANT_CANS, 1.0, 1.0, 20.0);
         Coffee coffee2 = new Coffee("Za", Condition.INSTANT_CANS, 1.0, 1.0, 20.0);
@@ -21,11 +21,12 @@ class SortingTest {
         sorting.sortByName(list);
 
         Assert.assertEquals("At", list.get(0).getName());
+        Assert.assertEquals("Ka", list.get(1).getName());
         Assert.assertEquals("Za", list.get(2).getName());
     }
 
     @Test
-    void sortByPrice() {
+    void should_sort_list_by_price() {
 
         Coffee coffee1 = new Coffee("Ka", Condition.INSTANT_CANS, 1.0, 1.0, 15.0);
         Coffee coffee2 = new Coffee("Za", Condition.INSTANT_CANS, 1.0, 1.0, 50.0);
@@ -34,12 +35,13 @@ class SortingTest {
         Sorting sorting = new Sorting();
         sorting.sortByPrice(list);
         Assert.assertTrue(10.0 == list.get(0).getPrice());
+        Assert.assertTrue(15.0 == list.get(1).getPrice());
         Assert.assertTrue(50.0 == list.get(2).getPrice());
 
     }
 
     @Test
-    void sortByWeight() {
+    void should_sort_list_by_weight() {
         Coffee coffee1 = new Coffee("Ka", Condition.INSTANT_CANS, 1.0, 2.0, 15.0);
         Coffee coffee2 = new Coffee("Za", Condition.INSTANT_CANS, 1.0, 3.0, 50.0);
         Coffee coffee3 = new Coffee("At", Condition.INSTANT_CANS, 1.0, 1.0, 10.0);
@@ -47,11 +49,12 @@ class SortingTest {
         Sorting sorting = new Sorting();
         sorting.sortByWeight(list);
         Assert.assertTrue(1.0 == list.get(0).getWeight());
+        Assert.assertTrue(2.0 == list.get(1).getWeight());
         Assert.assertTrue(3.0 == list.get(2).getWeight());
     }
 
     @Test
-    void sortByPriceToWeight() {
+    void should_sort_list_by_price_to_weight() {
         Coffee coffee1 = new Coffee("Ka", Condition.INSTANT_CANS, 1.0, 2.0, 15.0);
         Coffee coffee2 = new Coffee("Za", Condition.INSTANT_CANS, 1.0, 3.0, 50.0);
         Coffee coffee3 = new Coffee("At", Condition.INSTANT_CANS, 1.0, 1.0, 10.0);

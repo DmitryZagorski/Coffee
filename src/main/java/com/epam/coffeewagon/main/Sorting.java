@@ -51,7 +51,7 @@ public class Sorting {
                     sortByNameThenByPrice(list);
                     break;
                 default:
-                    System.err.println("Incorrect number, try again");
+                    System.err.println("Nothing have been chosen. This is the end.");
             }
         } catch (IOException e) {
             e.printStackTrace();

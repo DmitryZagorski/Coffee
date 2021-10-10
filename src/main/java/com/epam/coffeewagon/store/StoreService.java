@@ -25,19 +25,4 @@ public class StoreService implements StoreInterface {
             listOfCoffeeInStore.add(coffee);
         }
     }
-
-    public void removeCoffeeFromStore(Coffee coffee) {
-        LOGGER.info("Removing coffee '{}' from store", coffee);
-        for (int i = 0; i < getListOfCoffeeInStore().size(); i++) {
-            if (coffee.getName().equals(getListOfCoffeeInStore().get(i).getName()) &&
-                    coffee.getPrice() == getListOfCoffeeInStore().get(i).getPrice() &&
-                    coffee.getCapacity() == getListOfCoffeeInStore().get(i).getCapacity()) {
-                getListOfCoffeeInStore().remove(getListOfCoffeeInStore().get(i));
-            } else if (coffee.getName().equals(getListOfCoffeeInStore().get(i).getName()) &&
-                    coffee.getCapacity() < getListOfCoffeeInStore().get(i).getCapacity()) {
-                getListOfCoffeeInStore().get(i).setCapacity(getListOfCoffeeInStore().get(i).getCapacity() -
-                        coffee.getCapacity());
-            }
-        }
-    }
 }

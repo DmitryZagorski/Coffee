@@ -1,18 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Coffee:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ddbaf097-8380-4c8d-9d85-13ccab8f8011" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Coffee_jar2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Coffee_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Coffee_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/garage/GarageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/garage/GarageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Coffee_jar/Coffee.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Coffee_jar/Coffee.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Communicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Greeting.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Loading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Loading.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Sorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/main/Sorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/FirstCoffeeListInStore.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreFileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/store/StoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epam/coffeewagon/wagon/WagonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/garage/GarageServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/garage/GarageServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/LoadingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/LoadingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/SortingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/main/SortingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreFileServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreFileServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/store/StoreServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/wagon/WagonServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/epam/coffeewagon/wagon/WagonServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/coffee/Coffee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/coffee/condition/Condition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/garage/Garage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/garage/GarageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/garage/GarageServiceInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/main/Communicator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/main/Greeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/main/Loading.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/main/Sorting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/store/Store.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/store/StoreFileInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/store/StoreFileService$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/store/StoreFileService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/store/StoreInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/store/StoreService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/wagon/Wagon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/wagon/WagonService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/com/epam/coffeewagon/wagon/WagonServiceInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/lib/apiguardian-api-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/lib/gson-2.8.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/lib/junit-jupiter-api-5.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/lib/junit-platform-commons-1.8.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/lib/opentest4j-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/lib/slf4j-api-1.7.32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/lib/slf4j-simple-1.7.32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Coffee/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/coffeewagon/store/StoreFileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/coffeewagon/store/StoreFileService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/coffeewagon/store/StoreInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/coffeewagon/store/StoreInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epam/coffeewagon/store/StoreService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epam/coffeewagon/store/StoreService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/css/maven-base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/css/maven-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/css/print.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/css/site.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/collapsed.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/expanded.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/external.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/icon_error_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/icon_info_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/icon_success_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/icon_warning_sml.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/logos/build-by-maven-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/logos/maven-feather.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/images/newwindow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/plugins.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/project-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/epam/coffeewagon/main/LoadingTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/epam/coffeewagon/main/SortingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/coffeewagon/main/SortingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/epam/coffeewagon/store/StoreServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/epam/coffeewagon/store/StoreServiceTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +114,7 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -51,16 +127,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="coffee" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/Coffee_jar/Coffee.jar" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -74,6 +157,9 @@
       <recent name="com.epam.coffeewagon" />
       <recent name="com.epam.coffeewagon.main" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java\Coffee\src\main\java" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -81,7 +167,16 @@
       <recent name="D:\java\Coffee\src\main\java\com\store" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.StoreFileServiceTest.writeFirstConditionOfStore">
+    <configuration name="Coffee" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.epam.coffeewagon.main.Main" />
+      <module name="Coffee" />
+      <shortenClasspath name="MANIFEST" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="assembly:single" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.epam.coffeewagon.main.Main" />
       <module name="Coffee" />
@@ -91,22 +186,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SortingTest.sortByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Coffee" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.epam.coffeewagon.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.epam.coffeewagon.main" />
-      <option name="MAIN_CLASS_NAME" value="com.epam.coffeewagon.main.SortingTest" />
-      <option name="METHOD_NAME" value="sortByName" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,13 +238,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StoreFileServiceTest.writeFirstConditionOfStore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coffee" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epam.coffeewagon.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epam.coffeewagon.store" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.coffeewagon.store.StoreFileServiceTest" />
+      <option name="METHOD_NAME" value="writeFirstConditionOfStore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Coffee" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.SortingTest.sortByPrice" />
+      <item itemvalue="JUnit.SortingTest.sortByPriceToWeight" />
+      <item itemvalue="JUnit.SortingTest.sortByWeight" />
+      <item itemvalue="JUnit.StoreFileServiceTest.writeFirstConditionOfStore" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StoreFileServiceTest.writeFirstConditionOfStore" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SortingTest.sortByPriceToWeight" />
         <item itemvalue="JUnit.SortingTest.sortByWeight" />
         <item itemvalue="JUnit.SortingTest.sortByPrice" />
-        <item itemvalue="JUnit.SortingTest.sortByName" />
       </list>
     </recent_temporary>
   </component>
@@ -187,22 +290,34 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="109" y="13" key="#SortingTest.sortCargos/0.0.1024.728@0.0.1024.728" timestamp="1633244980177" />
+    <state x="0" y="0" width="1024" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1633811499347">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="0" y="0" width="1024" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1024.728@0.0.1024.728" timestamp="1633811499347" />
     <state x="240" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1632671816015">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="240" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1024.728@0.0.1024.728" timestamp="1632671816015" />
+    <state x="292" y="68" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1633811174716">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="292" y="68" key="#com.intellij.ide.macro.MacrosDialog/0.0.1024.728@0.0.1024.728" timestamp="1633811174716" />
     <state x="317" y="79" key="#com.intellij.ide.util.MemberChooser" timestamp="1633251775174">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="317" y="79" key="#com.intellij.ide.util.MemberChooser/0.0.1024.728@0.0.1024.728" timestamp="1633251775174" />
+    <state x="242" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1633811492414">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="242" y="147" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1024.728@0.0.1024.728" timestamp="1633811492414" />
     <state x="255" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1633254913512">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="255" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1024.728@0.0.1024.728" timestamp="1633254913512" />
-    <state x="308" y="222" width="410" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1633243476022">
+    <state x="308" y="222" width="470" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1633773872664">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="308" y="222" width="410" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1024.728@0.0.1024.728" timestamp="1633243476022" />
+    <state x="308" y="222" width="470" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1024.728@0.0.1024.728" timestamp="1633773872664" />
     <state x="308" y="243" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1633254918613">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
@@ -219,50 +334,58 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="267" y="66" key="#xdebugger.evaluate/0.0.1024.728@0.0.1024.728" timestamp="1633155779540" />
-    <state width="980" height="174" key="GridCell.Tab.0.bottom" timestamp="1633762232132">
+    <state x="246" y="125" key="EnvironmentVariablesDialog" timestamp="1633811185106">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="174" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633762232132" />
-    <state width="980" height="174" key="GridCell.Tab.0.center" timestamp="1633762232132">
+    <state x="246" y="125" key="EnvironmentVariablesDialog/0.0.1024.728@0.0.1024.728" timestamp="1633811185106" />
+    <state x="292" y="118" key="FileChooserDialogImpl" timestamp="1633811295256">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="174" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1633762232132" />
-    <state width="980" height="174" key="GridCell.Tab.0.left" timestamp="1633762232132">
+    <state x="292" y="118" key="FileChooserDialogImpl/0.0.1024.728@0.0.1024.728" timestamp="1633811295256" />
+    <state width="980" height="125" key="GridCell.Tab.0.bottom" timestamp="1633815082513">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="174" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1633762232132" />
-    <state width="980" height="174" key="GridCell.Tab.0.right" timestamp="1633762232132">
+    <state width="980" height="125" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633815082513" />
+    <state width="980" height="125" key="GridCell.Tab.0.center" timestamp="1633815082513">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="174" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1633762232132" />
-    <state width="980" height="216" key="GridCell.Tab.1.bottom" timestamp="1633761617111">
+    <state width="980" height="125" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1633815082513" />
+    <state width="980" height="125" key="GridCell.Tab.0.left" timestamp="1633815082513">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633761617111" />
-    <state width="980" height="216" key="GridCell.Tab.1.center" timestamp="1633761617111">
+    <state width="980" height="125" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1633815082513" />
+    <state width="980" height="125" key="GridCell.Tab.0.right" timestamp="1633815082513">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.center/0.0.1024.728@0.0.1024.728" timestamp="1633761617111" />
-    <state width="980" height="216" key="GridCell.Tab.1.left" timestamp="1633761617110">
+    <state width="980" height="125" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1633815082513" />
+    <state width="980" height="216" key="GridCell.Tab.1.bottom" timestamp="1633784586757">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.left/0.0.1024.728@0.0.1024.728" timestamp="1633761617110" />
-    <state width="980" height="216" key="GridCell.Tab.1.right" timestamp="1633761617111">
+    <state width="980" height="216" key="GridCell.Tab.1.bottom/0.0.1024.728@0.0.1024.728" timestamp="1633784586757" />
+    <state width="980" height="216" key="GridCell.Tab.1.center" timestamp="1633784586757">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state width="980" height="216" key="GridCell.Tab.1.right/0.0.1024.728@0.0.1024.728" timestamp="1633761617111" />
+    <state width="980" height="216" key="GridCell.Tab.1.center/0.0.1024.728@0.0.1024.728" timestamp="1633784586757" />
+    <state width="980" height="216" key="GridCell.Tab.1.left" timestamp="1633784586757">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="216" key="GridCell.Tab.1.left/0.0.1024.728@0.0.1024.728" timestamp="1633784586757" />
+    <state width="980" height="216" key="GridCell.Tab.1.right" timestamp="1633784586757">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="216" key="GridCell.Tab.1.right/0.0.1024.728@0.0.1024.728" timestamp="1633784586757" />
     <state x="42" y="18" key="Maven.ArtifactSearchDialog" timestamp="1633185836599">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="42" y="18" key="Maven.ArtifactSearchDialog/0.0.1024.728@0.0.1024.728" timestamp="1633185836599" />
-    <state x="0" y="0" key="SettingsEditor" timestamp="1633185453948">
+    <state x="0" y="0" key="SettingsEditor" timestamp="1633810856069">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="0" y="0" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1633185453948" />
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1633724696152">
+    <state x="0" y="0" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1633810856069" />
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog" timestamp="1633786183673">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1633724696152" />
+    <state x="207" y="186" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1633786183673" />
     <state x="216" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1633185431464">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
@@ -275,13 +398,13 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="0" y="58" key="new project wizard/0.0.1024.728@0.0.1024.728" timestamp="1633625509502" />
-    <state x="168" y="157" key="run.anything.popup" timestamp="1633629616208">
+    <state x="168" y="157" width="672" height="677" key="run.anything.popup" timestamp="1633805284327">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="168" y="157" key="run.anything.popup/0.0.1024.728@0.0.1024.728" timestamp="1633629616208" />
-    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1633634462575">
+    <state x="168" y="157" width="672" height="677" key="run.anything.popup/0.0.1024.728@0.0.1024.728" timestamp="1633805284327" />
+    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1633781379902">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1024.728@0.0.1024.728" timestamp="1633634462575" />
+    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1024.728@0.0.1024.728" timestamp="1633781379902" />
   </component>
 </project>

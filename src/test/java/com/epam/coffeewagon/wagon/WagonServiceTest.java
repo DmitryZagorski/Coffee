@@ -13,7 +13,7 @@ import java.util.List;
 class WagonServiceTest {
 
     @Test
-    void getCurrentCapacityOfCargoInWagon() {
+    void should_get_current_capacity_of_cargo_in_wagon() {
         GarageService garageService = new GarageService();
         WagonService wagonService = new WagonService();
         String wagonName = "firstWagon";
@@ -26,7 +26,7 @@ class WagonServiceTest {
     }
 
     @Test
-    void getCurrentWeightOfCargoInWagon() {
+    void should_get_current_weight_of_cargo_in_wagon() {
         GarageService garageService = new GarageService();
         WagonService wagonService = new WagonService();
         String wagonName = "firstWagon";
@@ -51,7 +51,7 @@ class WagonServiceTest {
     }
 
     @Test
-    void addCoffeeToWagon() {
+    void should_add_new_coffee_to_list_of_coffee_in_wagon() {
         GarageService garageService = new GarageService();
         WagonService wagonService = new WagonService();
         String wagonName = "firstWagon";
@@ -69,7 +69,7 @@ class WagonServiceTest {
     }
 
     @Test
-    void addCoffeeToWagonManually() {
+    void should_add_new_coffee_to_list_of_coffee_in_wagon_manually() {
         GarageService garageService = new GarageService();
         WagonService wagonService = new WagonService();
         String wagonName = "firstWagon";
@@ -83,7 +83,7 @@ class WagonServiceTest {
     }
 
     @Test
-    void removeCoffeeFromWagon() {
+    void should_remove_coffee_from_list_of_coffee_in_wagon() {
         GarageService garageService = new GarageService();
         WagonService wagonService = new WagonService();
         String wagonName = "firstWagon";
@@ -101,7 +101,7 @@ class WagonServiceTest {
     }
 
     @Test
-    void getListOfCoffeeInWagon() {
+    void should_get_list_of_coffee_in_wagon() {
         GarageService garageService = new GarageService();
         WagonService wagonService = new WagonService();
         String wagonName = "firstWagon";
@@ -118,12 +118,10 @@ class WagonServiceTest {
 
         Assert.assertEquals(expectedSize, actual.size());
         Assert.assertEquals(expectedFirstName, actual.get(0).getName());
-
-
     }
 
     @Test
-    void addCoffeeToWagonAutomatically() {
+    void should_add_new_coffee_to_list_of_coffee_in_wagon_automatically() {
         GarageService garageService = new GarageService();
         WagonService wagonService = new WagonService();
         String wagonName = "firstWagon";
@@ -139,7 +137,7 @@ class WagonServiceTest {
     }
 
     @Test
-    void findCheepCoffeeInStore() {
+    void should_find_the_most_cheep_coffee_in_store() {
         StoreService storeService = new StoreService();
         WagonService wagonService = new WagonService();
         List<Coffee> list = storeService.getListOfCoffeeInStore();
@@ -153,6 +151,5 @@ class WagonServiceTest {
 
         Assert.assertEquals(minPrice, wagonService.findCheepCoffeeInStore().getPrice(), 0.0);
         Assert.assertEquals(minPriceIViewInList, wagonService.findCheepCoffeeInStore().getPrice(), 0.0);
-
     }
 }
