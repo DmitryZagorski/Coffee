@@ -1,18 +1,14 @@
 package com.epam.coffeewagon.main;
 
-        import com.epam.coffeewagon.coffee.condition.Condition;
-        import com.epam.coffeewagon.wagon.WagonServiceInterface;
-        import org.junit.After;
-        import org.junit.Assert;
-        import org.junit.Before;
-     //   import org.junit.Rule;
-      //  import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
-        import org.junit.jupiter.api.Test;
-        import org.mockito.Mockito;
+import com.epam.coffeewagon.coffee.condition.Condition;
+import com.epam.coffeewagon.wagon.WagonServiceInterface;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
-        import java.io.*;
-
-        //import static org.junit.contrib.java.lang.system.TextFromStandardInputStream.emptyStandardInputStream;
+import java.io.*;
 
 class LoadingTest {
 
@@ -71,7 +67,7 @@ class LoadingTest {
         loading.loadWagon(wagonName, maxPrice);
         // then
         Mockito.verify(wagonService).addCoffeeToWagonManually(wagonName, coffeeName, condition);
-
+        
     }
 
     @Test
