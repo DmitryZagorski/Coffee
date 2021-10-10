@@ -9,15 +9,11 @@ public class Communicator {
 
     public String getStringFromBufferedReader() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s = reader.readLine();
-        reader.close();
-        return s;
+        return reader.readLine();
     }
 
     public double getDoubleFromBufferedReader() {
         Scanner scanner = new Scanner(System.in);
-        double d = Double.parseDouble(scanner.nextLine());
-        scanner.close();
-        return d;
+        return Double.parseDouble(scanner.nextLine());
     }
 }

@@ -32,10 +32,9 @@ public class Loading {
         LOGGER.info("Starting of loading wagon named '{}' and with max price of cargo '{}'.", wagonName, maxPrice);
         printInfoBeforeLoadWagon();
         int count = 0;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String choice = "";
         while (choice.equals("")) {
-            choice = reader.readLine();
+            choice = new Communicator().getStringFromBufferedReader();
             if (choice.equals("1")) {
                 wagonServiceInterface.addCoffeeToWagonAutomatically(wagonName, maxPrice);
                 System.out.println("List of coffee in wagon: ");
@@ -107,9 +106,8 @@ public class Loading {
         String name = "";
         String coffeeName = "";
         int count = 0;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         while (name.equals("")) {
-            name = reader.readLine();
+            name = new Communicator().getStringFromBufferedReader();
             if (name.equals("1")) {
                 coffeeName = "Barista";
                 break;
@@ -146,10 +144,9 @@ public class Loading {
         askConditionOfLoadingCoffee();
         Condition condition = null;
         int count = 0;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String choice = "";
         while (choice.equals("")) {
-            choice = reader.readLine();
+            choice = new Communicator().getStringFromBufferedReader();
             if (choice.equals("1")) {
                 condition = Condition.BEANS;
                 break;
