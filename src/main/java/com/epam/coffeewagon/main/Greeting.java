@@ -27,8 +27,7 @@ public class Greeting {
         return name;
     }
 
-    public Double chooseMaxPriceOfCargoInWagon() throws IOException {
-
+    public Double chooseMaxPriceOfCargoInWagon() {
         double maxPrice = 0.0;
         int count = 0;
         while (maxPrice == 0.0) {

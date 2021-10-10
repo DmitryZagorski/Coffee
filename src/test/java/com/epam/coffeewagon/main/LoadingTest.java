@@ -7,14 +7,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-
 import java.io.*;
 
 class LoadingTest {
 
     private final InputStream systemIn = System.in;
     private final PrintStream systemOut = System.out;
-
     private ByteArrayInputStream testIn;
     private ByteArrayOutputStream testOut;
 
@@ -53,7 +51,7 @@ class LoadingTest {
         Mockito.verify(wagonService).addCoffeeToWagonAutomatically(wagonName, maxPrice);
     }
 
-    @Test
+/*    @Test
     void should_add_coffee_to_wagon_manually_if_second_option_is_chosen() throws IOException {
         // given
         WagonServiceInterface wagonService = Mockito.mock(WagonServiceInterface.class);
@@ -67,9 +65,8 @@ class LoadingTest {
         loading.loadWagon(wagonName, maxPrice);
         // then
         Mockito.verify(wagonService).addCoffeeToWagonManually(wagonName, coffeeName, condition);
-        
     }
-
+*/
     @Test
     void should_choose_name_of_coffee() throws IOException {
         // given
@@ -95,5 +92,4 @@ class LoadingTest {
         //then
         Assert.assertEquals(condition, actualCondition);
     }
-
 }

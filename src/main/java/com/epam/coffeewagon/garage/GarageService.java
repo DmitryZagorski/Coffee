@@ -14,5 +14,4 @@ public class GarageService implements GarageServiceInterface {
         LOGGER.info("Starting of adding new wagon with name '{}' and with maximal price of cargo equals '{}' .", name, maxPriceOfCargo );
         getListOfWagon().add(new Wagon(name, maxPriceOfCargo));
     }
-
 }

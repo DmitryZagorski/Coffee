@@ -18,17 +18,12 @@ public class Main {
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class.getSimpleName());
 
     public static void main(String[] args) throws IOException {
-
         LOGGER.info("Our program is started");
 
         StoreFileInterface storeFileInterface = new StoreFileService();
-
         storeFileInterface.writeFirstConditionOfStore();
-
         GarageServiceInterface garageServiceInterface = new GarageService();
-
         WagonServiceInterface wagonServiceInterface = new WagonService();
-
         StoreInterface storeInterface = new StoreService();
 
         Greeting greeting = new Greeting();
@@ -49,33 +44,6 @@ public class Main {
 
         System.out.println("This is the end.");
         System.out.println("You can push the button 'Run main' to retry...");
-
         LOGGER.info("Our program is ended");
     }
 }
-
-/*
-<plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <executions>
-            <execution>
-              <phase>package</phase>
-              <goals>
-                <goal>single</goal>
-              </goals>
-              <configuration>
-                <archive>
-                  <manifest>
-                    <addClasspath>true</addClasspath>
-                    <mainClass>com/epam/coffeewagon/main/Main</mainClass>
-                  </manifest>
-                </archive>
-                <descriptorRefs>
-                  <descriptorRef>jar-with-dependencies</descriptorRef>
-                </descriptorRefs>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
- */

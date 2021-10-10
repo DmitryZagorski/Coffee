@@ -1,7 +1,6 @@
 package com.epam.coffeewagon.coffee;
 
 import com.epam.coffeewagon.coffee.condition.Condition;
-
 import java.io.Serializable;
 
 public class Coffee implements Serializable {

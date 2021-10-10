@@ -2,7 +2,6 @@ package com.epam.coffeewagon.wagon;
 
 import com.epam.coffeewagon.coffee.Coffee;
 import com.epam.coffeewagon.coffee.condition.Condition;
-
 import java.util.List;
 
 public interface WagonServiceInterface {
@@ -22,5 +21,4 @@ public interface WagonServiceInterface {
     void addCoffeeToWagonAutomatically(String wagonName, double maxPriceInWagon);
 
     void addCoffeeToWagonManually(String wagonName, String coffeeName, Condition condition);
-
 }

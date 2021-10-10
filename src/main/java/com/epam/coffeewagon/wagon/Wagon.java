@@ -1,7 +1,6 @@
 package com.epam.coffeewagon.wagon;
 
 import com.epam.coffeewagon.coffee.Coffee;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +47,5 @@ public class Wagon {
     public List<Coffee> getCargoList() {
         return cargoList;
     }
-
 }
 

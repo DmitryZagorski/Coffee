@@ -4,7 +4,6 @@ import com.epam.coffeewagon.coffee.Coffee;
 import com.epam.coffeewagon.coffee.condition.Condition;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-
 import java.util.Arrays;
 import java.util.List;
 

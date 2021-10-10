@@ -7,7 +7,6 @@ import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -19,11 +18,8 @@ import java.util.List;
 public class StoreFileService implements StoreFileInterface {
 
     Gson gson = new Gson();
-
     private static final Logger LOGGER = LoggerFactory.getLogger(StoreFileService.class.getSimpleName());
-
     private static final String FIRST_CONDITION_COFFEE_IN_STORE = "FirstCoffeeListInStore.json";
-
     List<Coffee> startCoffeeConditionList = new ArrayList<>();
 
     {
@@ -39,7 +35,6 @@ public class StoreFileService implements StoreFileInterface {
         startCoffeeConditionList.add(new Coffee("Lavazza", Condition.GROUND, 0.5, 0.1, 30.0));
         startCoffeeConditionList.add(new Coffee("Lavazza", Condition.INSTANT_BAGS, 0.5, 0.2, 40.0));
         startCoffeeConditionList.add(new Coffee("Lavazza", Condition.INSTANT_CANS, 1.0, 0.2, 35.0));
-
     }
 
     public void writeFirstConditionOfStore() {

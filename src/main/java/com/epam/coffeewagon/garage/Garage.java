@@ -1,7 +1,6 @@
 package com.epam.coffeewagon.garage;
 
 import com.epam.coffeewagon.wagon.Wagon;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,5 +24,4 @@ public class Garage{
     public static List<Wagon> getListOfWagon() {
         return listOfWagon;
     }
-
 }

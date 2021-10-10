@@ -3,7 +3,6 @@ package com.epam.coffeewagon.store;
 import com.epam.coffeewagon.coffee.Coffee;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-
 import java.io.File;
 import java.util.List;
 

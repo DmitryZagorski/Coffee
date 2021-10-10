@@ -1,7 +1,6 @@
 package com.epam.coffeewagon.store;
 
 import com.epam.coffeewagon.coffee.Coffee;
-
 import java.util.ArrayList;
 import java.util.List;
 

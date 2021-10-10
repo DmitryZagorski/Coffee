@@ -6,7 +6,6 @@ import com.epam.coffeewagon.garage.Garage;
 import com.epam.coffeewagon.garage.GarageService;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
 
 class WagonServiceTest {

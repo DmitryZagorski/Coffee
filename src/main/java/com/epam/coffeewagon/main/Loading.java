@@ -5,7 +5,6 @@ import com.epam.coffeewagon.coffee.condition.Condition;
 import com.epam.coffeewagon.wagon.WagonServiceInterface;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.util.List;
 

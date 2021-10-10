@@ -3,13 +3,11 @@ package com.epam.coffeewagon.store;
 import com.epam.coffeewagon.coffee.Coffee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
 public class StoreService implements StoreInterface {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StoreService.class.getSimpleName());
-
     List<Coffee> listOfCoffeeInStore;
 
     {
